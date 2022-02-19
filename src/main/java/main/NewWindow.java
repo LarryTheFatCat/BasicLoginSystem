@@ -2,6 +2,7 @@ package main;
 
 import java.awt.*;
 import javax.swing.*;
+
 public class NewWindow {
 
     JFrame frame = new JFrame();
@@ -17,6 +18,11 @@ public class NewWindow {
         usernamelabel.setFont(new Font(null,Font.PLAIN,10));
         textUsername.setBounds(47,0,100,20);
 
+        frame.getContentPane().setBackground(Color.darkGray);
+
+        activationCode.setForeground(Color.white);
+        usernamelabel.setForeground(Color.white);
+        passwordLabel.setForeground(Color.white);
 
         passwordLabel.setBounds(0,20,100,20);
         passwordLabel.setFont(new Font(null,Font.PLAIN,10));
@@ -25,7 +31,6 @@ public class NewWindow {
         activationCode.setBounds(0,40,100,20);
         activationCode.setFont(new Font(null,Font.PLAIN,10));
         activationCodeInput.setBounds(67,40,100,20);
-
 
         frame.add(usernamelabel);
         frame.add(textUsername);
