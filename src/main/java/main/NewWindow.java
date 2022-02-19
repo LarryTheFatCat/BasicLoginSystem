@@ -2,6 +2,7 @@ package main;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 
@@ -38,15 +39,17 @@ public class NewWindow {
         registerButton.setBounds(67, 60, 100, 20);
         registerButton.setFont(new Font(null, Font.PLAIN, 10));
         registerButton.addActionListener(onClick -> {
+            successLabel.setText("Registered Successfully!");
             String user = textUsername.getText();
             String password = textPassword.getText();
             String activationcode = activationCodeInput.getText();
             System.out.println(user + ", " + password + ", " + activationcode);
             creatUserFile(user, password, activationcode);
+
         });
 
         // SuccessLabel
-        successLabel.setBounds(67, 60, 100, 20);
+        successLabel.setBounds(67, 100, 100, 20);
         successLabel.setFont(new Font(null, Font.PLAIN, 10));
 
         //  checkbox settings
@@ -76,10 +79,11 @@ public class NewWindow {
     }
 
     private void creatUserFile(String username, String password, String activeCode) {
-        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(username + ".txt"))) {
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("Info" + ".txt"))) {
             bufferedWriter.write(username + ", " + password + ", " + activeCode);
         } catch (Exception exception) {
             System.out.println(exception.getMessage());
         }
     }
+
 }
