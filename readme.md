@@ -20,3 +20,9 @@ it should pop a text that says: Register Successful. Hopefully in the future I c
 
 - Main.
 - Not fully developed. Soon^TM
+
+
+# Images 
+
+So I'm just going to show the Register because I hate the other parts as it's not done and I plan on finishing the most
+difficult part first.
