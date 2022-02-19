@@ -1,7 +1,7 @@
 package main;
 
-import java.awt.*;
 import javax.swing.*;
+import java.awt.*;
 
 public class NewWindow {
 
@@ -12,11 +12,12 @@ public class NewWindow {
     JTextField textUsername = new JTextField("Username");
     JPasswordField textPassword = new JPasswordField("Password");
     JPasswordField activationCodeInput = new JPasswordField("activationCode");
-    NewWindow(){
+
+    NewWindow() {
         // represent x,y,z,w,h
-        usernamelabel.setBounds(0,0,100,20);
-        usernamelabel.setFont(new Font(null,Font.PLAIN,10));
-        textUsername.setBounds(47,0,100,20);
+        usernamelabel.setBounds(0, 0, 100, 20);
+        usernamelabel.setFont(new Font(null, Font.PLAIN, 10));
+        textUsername.setBounds(67, 0, 100, 20);
 
         frame.getContentPane().setBackground(Color.darkGray);
 
@@ -24,13 +25,13 @@ public class NewWindow {
         usernamelabel.setForeground(Color.white);
         passwordLabel.setForeground(Color.white);
 
-        passwordLabel.setBounds(0,20,100,20);
-        passwordLabel.setFont(new Font(null,Font.PLAIN,10));
-        textPassword.setBounds(47,20,100,20);
+        passwordLabel.setBounds(0, 20, 100, 20);
+        passwordLabel.setFont(new Font(null, Font.PLAIN, 10));
+        textPassword.setBounds(67, 20, 100, 20);
 
-        activationCode.setBounds(0,40,100,20);
-        activationCode.setFont(new Font(null,Font.PLAIN,10));
-        activationCodeInput.setBounds(67,40,100,20);
+        activationCode.setBounds(0, 40, 100, 20);
+        activationCode.setFont(new Font(null, Font.PLAIN, 10));
+        activationCodeInput.setBounds(67, 40, 100, 20);
 
         frame.add(usernamelabel);
         frame.add(textUsername);
@@ -40,9 +41,8 @@ public class NewWindow {
         frame.add(activationCodeInput);
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(420,420);
+        frame.setSize(420, 420);
         frame.setLayout(null);
         frame.setVisible(true);
     }
-
 }
