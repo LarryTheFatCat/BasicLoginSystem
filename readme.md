@@ -25,4 +25,5 @@ it should pop a text that says: Register Successful. Hopefully in the future I c
 # Images 
 
 So I'm just going to show the Register because I hate the other parts as it's not done and I plan on finishing the most
-difficult part first.
+difficult part first. ![image](https://user-images.githubusercontent.com/83801755/154786759-ca36449c-856d-4656-9bb4-a9170e6f2948.png)
+
