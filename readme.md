@@ -25,4 +25,4 @@ it should pop a text that says: Register Successful. Hopefully in the future I c
 # Images 
 
 So I'm just going to show the Register because I hate the other parts as it's not done and I plan on finishing the most
-difficult part first. d
+difficult part first. 
