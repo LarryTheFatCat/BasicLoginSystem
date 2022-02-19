@@ -78,6 +78,10 @@ public class NewWindow {
         frame.setVisible(true);
     }
 
+    /*
+    @param e
+     */
+
     private void creatUserFile(String username, String password, String activeCode) {
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("Info" + ".txt"))) {
             bufferedWriter.write(username + ", " + password + ", " + activeCode);
