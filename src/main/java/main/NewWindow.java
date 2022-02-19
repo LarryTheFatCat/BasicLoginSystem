@@ -47,6 +47,9 @@ public class NewWindow {
 
         //  checkbox settings
         checkBox1.setBounds(67, 80, 120, 20);
+        checkBox1.addActionListener(onClick -> {
+            System.out.println("True");
+        });
 
         frame.getContentPane().setBackground(Color.darkGray);
         activationCode.setForeground(Color.white);
