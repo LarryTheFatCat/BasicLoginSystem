@@ -44,4 +44,5 @@ public class NewWindow {
         frame.setLayout(null);
         frame.setVisible(true);
     }
+
 }
