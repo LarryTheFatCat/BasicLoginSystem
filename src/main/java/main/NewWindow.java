@@ -20,6 +20,9 @@ public class NewWindow {
     JCheckBox checkBox1 = new JCheckBox("SavePassword");
 
     NewWindow() {
+
+        frame.setResizable(false);
+
         // username
         usernamelabel.setBounds(0, 0, 100, 20);
         usernamelabel.setFont(new Font(null, Font.PLAIN, 10));
