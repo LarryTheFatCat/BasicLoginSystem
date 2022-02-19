@@ -40,3 +40,4 @@ difficult part first.
 - Day 2
 - Implmented a couple lines of code that wheneverClicked register it saves the line of code and creates text file.
 - Changed the title of registerMode.
+- Changed the title of the launchPage.
