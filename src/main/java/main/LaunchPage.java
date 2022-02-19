@@ -17,11 +17,12 @@ public class LaunchPage implements ActionListener{
 
         loginButton.setBounds(20,20,100,20);
 
+
         frame.add(myButton);
         frame.add(loginButton);
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(250, 250);
+        frame.setSize(500,500);
         frame.setLayout(null);
         frame.setVisible(true);
 

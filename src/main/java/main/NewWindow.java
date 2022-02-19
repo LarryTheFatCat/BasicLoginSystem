@@ -5,17 +5,34 @@ import javax.swing.*;
 public class NewWindow {
 
     JFrame frame = new JFrame();
-    JLabel label = new JLabel("Username");
-    JTextField text = new JTextField("Username");
+    JLabel usernamelabel = new JLabel("Username");
+    JLabel passwordLabel = new JLabel("Password");
+    JLabel activationCode = new JLabel("activationCode");
+    JTextField textUsername = new JTextField("Username");
+    JPasswordField textPassword = new JPasswordField("Password");
+    JPasswordField activationCodeInput = new JPasswordField("activationCode");
     NewWindow(){
         // represent x,y,z,w,h
-        label.setBounds(0,0,100,20);
-        label.setFont(new Font(null,Font.PLAIN,20));
-        text.setBounds(50,10,100,20);
+        usernamelabel.setBounds(0,0,100,20);
+        usernamelabel.setFont(new Font(null,Font.PLAIN,10));
+        textUsername.setBounds(47,0,100,20);
 
 
-        frame.add(label);
-        frame.add(text);
+        passwordLabel.setBounds(0,20,100,20);
+        passwordLabel.setFont(new Font(null,Font.PLAIN,10));
+        textPassword.setBounds(47,20,100,20);
+
+        activationCode.setBounds(0,40,100,20);
+        activationCode.setFont(new Font(null,Font.PLAIN,10));
+        activationCodeInput.setBounds(67,40,100,20);
+
+
+        frame.add(usernamelabel);
+        frame.add(textUsername);
+        frame.add(passwordLabel);
+        frame.add(textPassword);
+        frame.add(activationCode);
+        frame.add(activationCodeInput);
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(420,420);
