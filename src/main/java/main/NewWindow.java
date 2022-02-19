@@ -2,6 +2,8 @@ package main;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 
 public class NewWindow {
 
@@ -39,6 +41,7 @@ public class NewWindow {
             String password = textPassword.getText();
             String activationcode = activationCodeInput.getText();
             System.out.println(user + ", " + password + ", " + activationcode);
+            creatUserFile(user,password,activationcode);
         });
 
         // SuccessLabel
@@ -69,5 +72,10 @@ public class NewWindow {
         frame.setSize(420, 420);
         frame.setLayout(null);
         frame.setVisible(true);
+    }
+    private void creatUserFile(String username,String password,String activeCode){
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(username+".txt"))) {
+            bufferedWriter.write(username+","+password+","+activeCode);
+        } catch (Exception exception){System.out.println(exception.getMessage());}
     }
 }
