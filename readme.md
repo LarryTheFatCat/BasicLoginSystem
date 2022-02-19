@@ -27,3 +27,15 @@ it should pop a text that says: Register Successful. Hopefully in the future I c
 So I'm just going to show the Register because I hate the other parts as it's not done and I plan on finishing the most
 difficult part first. 
 ![image](https://user-images.githubusercontent.com/83801755/154786867-e7467720-8380-4835-adab-88e91ef24a13.png)
+
+# Updates
+
+- Day 1:
+- Built the entire System
+- Focusing on Register until further notice 
+- Made background on register darkgrey 
+- made text white
+- Added checkBox1
+
+- Day 2
+- Implmented a couple lines of code that wheneverClicked register it saves the line of code and creates text file.
