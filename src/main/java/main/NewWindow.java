@@ -20,7 +20,7 @@ public class NewWindow {
     JCheckBox checkBox1 = new JCheckBox("SavePassword");
 
     NewWindow() {
-
+        frame.setTitle("Register Test 1.0");
         frame.setResizable(false);
         // username
         usernamelabel.setBounds(0, 0, 100, 20);
