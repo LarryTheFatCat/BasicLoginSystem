@@ -26,9 +26,3 @@ it should pop a text that says: Register Successful. Hopefully in the future I c
 
 So I'm just going to show the Register because I hate the other parts as it's not done and I plan on finishing the most
 difficult part first.
-
-
-# Updates 
-- Day 1:
-- I am halfway done the entire panels/systems
-- Added a clickAction so when registerIsPressed, it logs the Username, pass and code.
