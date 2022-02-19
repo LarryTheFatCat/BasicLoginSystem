@@ -12,26 +12,39 @@ public class NewWindow {
     JTextField textUsername = new JTextField("Username");
     JPasswordField textPassword = new JPasswordField("Password");
     JPasswordField activationCodeInput = new JPasswordField("activationCode");
+    JButton registerButton = new JButton("Register");
 
     NewWindow() {
-        // represent x,y,z,w,h
+        // username
         usernamelabel.setBounds(0, 0, 100, 20);
         usernamelabel.setFont(new Font(null, Font.PLAIN, 10));
         textUsername.setBounds(67, 0, 100, 20);
 
-        frame.getContentPane().setBackground(Color.darkGray);
-
-        activationCode.setForeground(Color.white);
-        usernamelabel.setForeground(Color.white);
-        passwordLabel.setForeground(Color.white);
-
+        // password
         passwordLabel.setBounds(0, 20, 100, 20);
         passwordLabel.setFont(new Font(null, Font.PLAIN, 10));
         textPassword.setBounds(67, 20, 100, 20);
 
+        // activation code
         activationCode.setBounds(0, 40, 100, 20);
         activationCode.setFont(new Font(null, Font.PLAIN, 10));
         activationCodeInput.setBounds(67, 40, 100, 20);
+
+        // register button
+        registerButton.setBounds(67, 60, 100, 20);
+        registerButton.setFont(new Font(null, Font.PLAIN, 10));
+        registerButton.addActionListener(onClick -> {
+            String user = textUsername.getText();
+            String password = textPassword.getText();
+            String activationcode = activationCodeInput.getText();
+            System.out.println(user + ", " + password + ", " + activationcode);
+        });
+
+
+        frame.getContentPane().setBackground(Color.darkGray);
+        activationCode.setForeground(Color.white);
+        usernamelabel.setForeground(Color.white);
+        passwordLabel.setForeground(Color.white);
 
         frame.add(usernamelabel);
         frame.add(textUsername);
@@ -39,6 +52,7 @@ public class NewWindow {
         frame.add(textPassword);
         frame.add(activationCode);
         frame.add(activationCodeInput);
+        frame.add(registerButton);
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(420, 420);
