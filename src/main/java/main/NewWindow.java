@@ -12,8 +12,9 @@ public class NewWindow {
     JTextField textUsername = new JTextField("Username");
     JPasswordField textPassword = new JPasswordField("Password");
     JPasswordField activationCodeInput = new JPasswordField("activationCode");
+    JLabel successLabel = new JLabel("Success!");
     JButton registerButton = new JButton("Register");
-
+    JCheckBox checkBox1 = new JCheckBox("SavePassword");
     NewWindow() {
         // username
         usernamelabel.setBounds(0, 0, 100, 20);
@@ -40,6 +41,12 @@ public class NewWindow {
             System.out.println(user + ", " + password + ", " + activationcode);
         });
 
+        // SuccessLabel
+        successLabel.setBounds(67, 60, 100, 20);
+        successLabel.setFont(new Font(null, Font.PLAIN, 10));
+
+        //  checkbox settings
+        checkBox1.setBounds(67, 80, 120, 20);
 
         frame.getContentPane().setBackground(Color.darkGray);
         activationCode.setForeground(Color.white);
@@ -53,6 +60,7 @@ public class NewWindow {
         frame.add(activationCode);
         frame.add(activationCodeInput);
         frame.add(registerButton);
+        frame.add(checkBox1);
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(420, 420);
