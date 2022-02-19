@@ -75,7 +75,7 @@ public class NewWindow {
     }
     private void creatUserFile(String username,String password,String activeCode){
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(username+".txt"))) {
-            bufferedWriter.write(username+","+password+","+activeCode);
+            bufferedWriter.write(username+", "+password+", "+activeCode);
         } catch (Exception exception){System.out.println(exception.getMessage());}
     }
 }
