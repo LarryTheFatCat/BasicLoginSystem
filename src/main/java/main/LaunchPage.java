@@ -10,6 +10,7 @@ public class LaunchPage implements ActionListener{
     JButton loginButton = new JButton("Login");
 
     LaunchPage(){
+        frame.setResizable(false);
         // represent x,y,w,h
         myButton.setBounds(20,40,100,20);
         myButton.setFocusable(false);

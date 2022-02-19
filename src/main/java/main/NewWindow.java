@@ -22,7 +22,6 @@ public class NewWindow {
     NewWindow() {
 
         frame.setResizable(false);
-
         // username
         usernamelabel.setBounds(0, 0, 100, 20);
         usernamelabel.setFont(new Font(null, Font.PLAIN, 10));
