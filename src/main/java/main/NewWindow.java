@@ -17,6 +17,7 @@ public class NewWindow {
     JLabel successLabel = new JLabel("Success!");
     JButton registerButton = new JButton("Register");
     JCheckBox checkBox1 = new JCheckBox("SavePassword");
+
     NewWindow() {
         // username
         usernamelabel.setBounds(0, 0, 100, 20);
@@ -41,7 +42,7 @@ public class NewWindow {
             String password = textPassword.getText();
             String activationcode = activationCodeInput.getText();
             System.out.println(user + ", " + password + ", " + activationcode);
-            creatUserFile(user,password,activationcode);
+            creatUserFile(user, password, activationcode);
         });
 
         // SuccessLabel
@@ -73,9 +74,12 @@ public class NewWindow {
         frame.setLayout(null);
         frame.setVisible(true);
     }
-    private void creatUserFile(String username,String password,String activeCode){
-        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(username+".txt"))) {
-            bufferedWriter.write(username+", "+password+", "+activeCode);
-        } catch (Exception exception){System.out.println(exception.getMessage());}
+
+    private void creatUserFile(String username, String password, String activeCode) {
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(username + ".txt"))) {
+            bufferedWriter.write(username + ", " + password + ", " + activeCode);
+        } catch (Exception exception) {
+            System.out.println(exception.getMessage());
+        }
     }
 }
