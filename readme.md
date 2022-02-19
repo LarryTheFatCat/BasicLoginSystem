@@ -26,3 +26,4 @@ it should pop a text that says: Register Successful. Hopefully in the future I c
 
 So I'm just going to show the Register because I hate the other parts as it's not done and I plan on finishing the most
 difficult part first. 
+![image](https://user-images.githubusercontent.com/83801755/154786867-e7467720-8380-4835-adab-88e91ef24a13.png)
