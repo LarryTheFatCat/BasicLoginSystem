@@ -1,6 +1,0 @@
-main/Main.java
- main.Main
-main/NewWindow.java
- main.NewWindow
-main/LaunchPage.java
- main.LaunchPage

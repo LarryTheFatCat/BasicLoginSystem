@@ -11,6 +11,7 @@ public class LaunchPage implements ActionListener{
     
 
     LaunchPage(){
+        frame.setTitle("Launch 1.0");
         frame.setTitle("Main 1.0");
         frame.setResizable(false);
 

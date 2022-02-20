@@ -1,8 +1,10 @@
 package main;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.io.*;
+import java.net.URL;
 
 public class NewWindow {
 
@@ -22,7 +24,7 @@ public class NewWindow {
     JCheckBox checkBox1 = new JCheckBox("SavePassword");
 
     NewWindow() {
-        frame.setTitle("Register Test 1.0");
+        frame.setTitle("Register 1.0");
         frame.setResizable(false);
 
         usernamelabel.setBounds(0, 0, 100, 20);
@@ -74,8 +76,9 @@ public class NewWindow {
         frame.setLayout(null);
         frame.setVisible(true);
     }
+
     private void creatUserFile(String username, String password, String activeCode) {
-        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("Info" + ".txt"))) {
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("Saved Passwords" + ".txt"))) {
             bufferedWriter.write(username + ", " + password + ", " + activeCode);
         } catch (Exception exception) {
             System.out.println(exception.getMessage());
