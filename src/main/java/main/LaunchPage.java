@@ -1,8 +1,6 @@
 package main;
 
 import java.awt.event.*;
-import java.io.File;
-import java.util.Objects;
 import javax.swing.*;
 
 public class LaunchPage implements ActionListener{

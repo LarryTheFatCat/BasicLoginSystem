@@ -48,12 +48,8 @@ public class NewWindow {
             creatUserFile(user, password, activationcode);
 
         });
-
-        successLabel.setBounds(67, 100, 100, 20);
-        successLabel.setFont(new Font(null, Font.PLAIN, 10));
-
         // x y w h
-        checkBox1.setBounds(67, 0, 120, 20);
+        checkBox1.setBounds(0, 240, 120, 20);
         checkBox1.addActionListener(onClick -> {
             System.out.println("True");
         });
@@ -78,8 +74,6 @@ public class NewWindow {
         frame.setLayout(null);
         frame.setVisible(true);
     }
-
-
     private void creatUserFile(String username, String password, String activeCode) {
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("Info" + ".txt"))) {
             bufferedWriter.write(username + ", " + password + ", " + activeCode);
