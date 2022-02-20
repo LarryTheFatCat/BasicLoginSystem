@@ -52,4 +52,5 @@ difficult part first.
 
 - Day 3 
 - Added github worflows so anyone can download any commit.
-- removed workflow
+- removed workflows
+- Added info page on LaunchPage, will add bounds later today
