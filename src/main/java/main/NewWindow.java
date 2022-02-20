@@ -1,10 +1,8 @@
 package main;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.io.*;
-import java.net.URL;
 
 public class NewWindow {
 
