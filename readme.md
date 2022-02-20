@@ -23,7 +23,11 @@ it should pop a text that says: Register Successful. Hopefully in the future I c
 
 
 # Requirements
-- A brain, Java 15.
+- A brain
+- Java 15 
+- If you really want this to work, you would have to link this to a dataBase, when you link it with sqr, then have the auth jar generate a code
+that if you input it into here, it checks the main dataBase and if it's checked and it is correct it allows the user to pass through the auth. Obviously this is a lot easier
+if you just use NetBeans IDE and JFX, but this is your choice but I honestly wouldn't use this nor will anyone lol.
 
 # Images 
 
