@@ -45,3 +45,6 @@ difficult part first.
 - Changed the title of registerMode.
 - Changed the title of the launchPage.
 - Just tested the clickAction -> creates .txt that stores pword via desktop and works!
+
+- Day 3 
+- Added github worflows so anyone can download any commit.
