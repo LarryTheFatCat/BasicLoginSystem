@@ -52,3 +52,4 @@ difficult part first.
 
 - Day 3 
 - Added github worflows so anyone can download any commit.
+- removed workflow
