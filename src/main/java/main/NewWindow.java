@@ -28,21 +28,29 @@ public class NewWindow {
         frame.add(registerButton);
         frame.add(checkBox1);
         frame.add(errorLabel);
-        
+
         frame.setTitle("Register 1.0");
         frame.setResizable(false);
+        frame.getContentPane().setBackground(Color.darkGray);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(800, 300);
+        frame.setLayout(null);
+        frame.setVisible(true);
 
+        textUsername.setBounds(67, 0, 100, 20);
         usernamelabel.setBounds(0, 0, 100, 20);
         usernamelabel.setFont(new Font(null, Font.PLAIN, 10));
-        textUsername.setBounds(67, 0, 100, 20);
+        usernamelabel.setForeground(Color.white);
 
+        textPassword.setBounds(67, 20, 100, 20);
         passwordLabel.setBounds(0, 20, 100, 20);
         passwordLabel.setFont(new Font(null, Font.PLAIN, 10));
-        textPassword.setBounds(67, 20, 100, 20);
+        passwordLabel.setForeground(Color.white);
 
+        activationCodeInput.setBounds(67, 40, 100, 20);
         activationCode.setBounds(0, 40, 100, 20);
         activationCode.setFont(new Font(null, Font.PLAIN, 10));
-        activationCodeInput.setBounds(67, 40, 100, 20);
+        activationCode.setForeground(Color.white);
 
         // x y w h
         checkBox1.setBounds(0, 240, 120, 20);
@@ -53,7 +61,6 @@ public class NewWindow {
         registerButton.setBounds(67, 60, 100, 20);
         registerButton.setFont(new Font(null, Font.PLAIN, 10));
         registerButton.addActionListener(onClick -> {
-            successLabel.setText("Registered Successfully!");
             String user = textUsername.getText();
             String password = textPassword.getText();
             String activationcode = activationCodeInput.getText();
@@ -61,16 +68,6 @@ public class NewWindow {
             creatUserFile(user, password, activationcode);
 
         });
-
-        frame.getContentPane().setBackground(Color.darkGray);
-        activationCode.setForeground(Color.white);
-        usernamelabel.setForeground(Color.white);
-        passwordLabel.setForeground(Color.white);
-
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(800, 300);
-        frame.setLayout(null);
-        frame.setVisible(true);
     }
 
     private void creatUserFile(String username, String password, String activeCode) {
