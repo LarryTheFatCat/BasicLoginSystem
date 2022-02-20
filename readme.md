@@ -22,6 +22,9 @@ it should pop a text that says: Register Successful. Hopefully in the future I c
 - Not fully developed. Soon^TM
 
 
+# Requirements
+- A brain, Java 15.
+
 # Images 
 
 So I'm just going to show the Register because I hate the other parts as it's not done and I plan on finishing the most
@@ -41,3 +44,4 @@ difficult part first.
 - Implmented a couple lines of code that wheneverClicked register it saves the line of code and creates text file.
 - Changed the title of registerMode.
 - Changed the title of the launchPage.
+- Just tested the clickAction -> creates .txt that stores pword via desktop and works!

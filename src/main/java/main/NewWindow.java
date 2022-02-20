@@ -2,9 +2,7 @@ package main;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
+import java.io.*;
 
 public class NewWindow {
 
@@ -18,6 +16,8 @@ public class NewWindow {
     JPasswordField textPassword = new JPasswordField("Password");
     JPasswordField activationCodeInput = new JPasswordField("Code");
     JButton registerButton = new JButton("Register");
+
+    JLabel errorLabel = new JLabel("Error!");
 
     JCheckBox checkBox1 = new JCheckBox("SavePassword");
 
@@ -52,7 +52,8 @@ public class NewWindow {
         successLabel.setBounds(67, 100, 100, 20);
         successLabel.setFont(new Font(null, Font.PLAIN, 10));
 
-        checkBox1.setBounds(67, 80, 120, 20);
+        // x y w h
+        checkBox1.setBounds(67, 0, 120, 20);
         checkBox1.addActionListener(onClick -> {
             System.out.println("True");
         });
@@ -70,9 +71,10 @@ public class NewWindow {
         frame.add(activationCodeInput);
         frame.add(registerButton);
         frame.add(checkBox1);
+        frame.add(errorLabel);
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(420, 420);
+        frame.setSize(800, 300);
         frame.setLayout(null);
         frame.setVisible(true);
     }
