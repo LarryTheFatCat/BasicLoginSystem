@@ -11,33 +11,32 @@ public class NewWindow {
     JFrame frame = new JFrame();
     JLabel usernamelabel = new JLabel("Username");
     JLabel passwordLabel = new JLabel("Password");
-    JLabel activationCode = new JLabel("activationCode");
+    JLabel activationCode = new JLabel("Code");
+    JLabel successLabel = new JLabel("Success!");
+
     JTextField textUsername = new JTextField("Username");
     JPasswordField textPassword = new JPasswordField("Password");
-    JPasswordField activationCodeInput = new JPasswordField("activationCode");
-    JLabel successLabel = new JLabel("Success!");
+    JPasswordField activationCodeInput = new JPasswordField("Code");
     JButton registerButton = new JButton("Register");
+
     JCheckBox checkBox1 = new JCheckBox("SavePassword");
 
     NewWindow() {
         frame.setTitle("Register Test 1.0");
         frame.setResizable(false);
-        // username
+
         usernamelabel.setBounds(0, 0, 100, 20);
         usernamelabel.setFont(new Font(null, Font.PLAIN, 10));
         textUsername.setBounds(67, 0, 100, 20);
 
-        // password
         passwordLabel.setBounds(0, 20, 100, 20);
         passwordLabel.setFont(new Font(null, Font.PLAIN, 10));
         textPassword.setBounds(67, 20, 100, 20);
 
-        // activation code
         activationCode.setBounds(0, 40, 100, 20);
         activationCode.setFont(new Font(null, Font.PLAIN, 10));
         activationCodeInput.setBounds(67, 40, 100, 20);
 
-        // register button
         registerButton.setBounds(67, 60, 100, 20);
         registerButton.setFont(new Font(null, Font.PLAIN, 10));
         registerButton.addActionListener(onClick -> {
@@ -50,11 +49,9 @@ public class NewWindow {
 
         });
 
-        // SuccessLabel
         successLabel.setBounds(67, 100, 100, 20);
         successLabel.setFont(new Font(null, Font.PLAIN, 10));
 
-        //  checkbox settings
         checkBox1.setBounds(67, 80, 120, 20);
         checkBox1.addActionListener(onClick -> {
             System.out.println("True");
@@ -80,9 +77,6 @@ public class NewWindow {
         frame.setVisible(true);
     }
 
-    /*
-    @param e
-     */
 
     private void creatUserFile(String username, String password, String activeCode) {
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("Info" + ".txt"))) {
@@ -91,5 +85,4 @@ public class NewWindow {
             System.out.println(exception.getMessage());
         }
     }
-
 }

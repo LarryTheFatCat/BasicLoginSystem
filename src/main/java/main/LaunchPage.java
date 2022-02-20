@@ -1,6 +1,8 @@
 package main;
 
 import java.awt.event.*;
+import java.io.File;
+import java.util.Objects;
 import javax.swing.*;
 
 public class LaunchPage implements ActionListener{
@@ -8,11 +10,12 @@ public class LaunchPage implements ActionListener{
     JFrame frame = new JFrame();
     JButton myButton = new JButton("Register");
     JButton loginButton = new JButton("Login");
+    
 
     LaunchPage(){
         frame.setTitle("Main 1.0");
         frame.setResizable(false);
-        // represent x,y,w,h
+
         myButton.setBounds(20,40,100,20);
         myButton.setFocusable(false);
         myButton.addActionListener(this);
