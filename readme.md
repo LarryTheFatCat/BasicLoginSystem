@@ -62,3 +62,5 @@ difficult part first.
 - Day 4
 - Made savedInfo .txt -> .json
 - added ResetButton to MM and RegisterWindow
+- Will not port to SQL server
+- Removed photos in resources
