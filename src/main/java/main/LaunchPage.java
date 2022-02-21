@@ -46,7 +46,6 @@ public class LaunchPage implements ActionListener{
         loginButton.addActionListener(onClick -> {
             String user = usernameText.getText();
             String password = passwordField.getText();
-            System.out.println(user + ", " + password + "Saved!");
             creatUserFile(user, password);
 
         });

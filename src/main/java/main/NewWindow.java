@@ -64,7 +64,6 @@ public class NewWindow {
             String user = textUsername.getText();
             String password = textPassword.getText();
             String activationcode = activationCodeInput.getText();
-            System.out.println(user + ", " + password + ", " + activationcode);
             creatUserFile(user, password, activationcode);
 
         });
