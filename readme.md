@@ -58,3 +58,7 @@ difficult part first.
 - Got rid of terminal outputs.
 - Renamed LaunchPage -> MainPage
 - Renamed NewWindow -> RegisterWindow
+
+- Day 4
+- Made savedInfo .txt -> .json
+- 
