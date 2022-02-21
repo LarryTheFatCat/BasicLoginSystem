@@ -2,8 +2,7 @@ package main;
 
 import java.awt.*;
 import java.awt.event.*;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
+import java.io.*;
 import javax.swing.*;
 
 public class LaunchPage implements ActionListener{
@@ -19,8 +18,10 @@ public class LaunchPage implements ActionListener{
     LaunchPage(){
         frame.add(registerButton);
         frame.add(loginButton);
+        frame.add(usernameLabel);
         frame.add(usernameText);
         frame.add(passwordLabel);
+        frame.add(passwordField);
 
         frame.getContentPane().setBackground(Color.darkGray);
         frame.setTitle("Main 1.0");
@@ -30,17 +31,15 @@ public class LaunchPage implements ActionListener{
         frame.setLayout(null);
         frame.setVisible(true);
 
-        usernameLabel.setBounds();
+        usernameLabel.setBounds(0, 20, 100, 20);
         usernameLabel.setFont(new Font(null, Font.PLAIN, 10));
-        usernameText.setBounds();
+        usernameText.setBounds(48, 20, 100, 20);
+        usernameLabel.setForeground(Color.WHITE);
 
-        passwordLabel.setBounds();
+        passwordLabel.setBounds(0, 40, 100, 20);
         passwordLabel.setFont(new Font(null, Font.PLAIN, 10));
-        passwordField.setBounds();
-
-        registerButton.setBounds(0,40,100,20);
-        registerButton.setFocusable(false);
-        registerButton.addActionListener(this);
+        passwordField.setBounds(48, 40, 100, 20);
+        passwordLabel.setForeground(Color.WHITE);
 
         loginButton.setBounds(0,240,700,20);
         loginButton.setFont(new Font(null, Font.PLAIN, 10));
@@ -51,7 +50,6 @@ public class LaunchPage implements ActionListener{
             creatUserFile(user, password);
 
         });
-
     }
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -60,8 +58,8 @@ public class LaunchPage implements ActionListener{
         }
     }
     private void creatUserFile(String username, String password) {
-        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("Saved Passwords" + ".txt"))) {
-            bufferedWriter.write(username + ", " + password + ", ");
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("Auth-Info" + ".json"))) {
+            bufferedWriter.write(username + ", " + password);
         } catch (Exception exception) {
             System.out.println(exception.getMessage());
         }
