@@ -41,6 +41,10 @@ public class MainPage implements ActionListener{
         passwordField.setBounds(48, 40, 100, 20);
         passwordLabel.setForeground(Color.WHITE);
 
+        registerButton.setBounds(0, 220, 100, 20);
+        registerButton.setFocusable(false);
+        registerButton.addActionListener(this);
+
         loginButton.setBounds(0,240,700,20);
         loginButton.setFont(new Font(null, Font.PLAIN, 10));
         loginButton.addActionListener(onClick -> {
