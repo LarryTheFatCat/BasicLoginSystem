@@ -54,3 +54,4 @@ difficult part first.
 - Added github worflows so anyone can download any commit.
 - removed workflows
 - Added info page on LaunchPage, will add bounds later today
+- Added bounds as of 2022/02/20
