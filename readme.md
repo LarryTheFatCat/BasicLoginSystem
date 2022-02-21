@@ -61,4 +61,4 @@ difficult part first.
 
 - Day 4
 - Made savedInfo .txt -> .json
-- 
+- Part 1 of moving to sql Database!
