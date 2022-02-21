@@ -35,12 +35,12 @@ public class MainPage implements ActionListener{
         usernameLabel.setBounds(0, 20, 100, 20);
         usernameLabel.setFont(new Font(null, Font.PLAIN, 10));
         usernameText.setBounds(48, 20, 100, 20);
-        usernameLabel.setForeground(Color.WHITE);
+        usernameLabel.setForeground(Color.white);
 
         passwordLabel.setBounds(0, 40, 100, 20);
         passwordLabel.setFont(new Font(null, Font.PLAIN, 10));
         passwordField.setBounds(48, 40, 100, 20);
-        passwordLabel.setForeground(Color.WHITE);
+        passwordLabel.setForeground(Color.white);
 
         registerButton.setBounds(0, 220, 100, 20);
         registerButton.setFocusable(false);

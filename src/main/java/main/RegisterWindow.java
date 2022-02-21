@@ -68,7 +68,7 @@ public class RegisterWindow {
     }
 
     private void creatUserFile(String username, String password, String activeCode) {
-        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("Saved Passwords" + ".txt"))) {
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("Info" + ".json"))) {
             bufferedWriter.write(username + ", " + password + ", " + activeCode);
         } catch (Exception exception) {
             System.out.println(exception.getMessage());
