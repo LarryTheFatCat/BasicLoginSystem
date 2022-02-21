@@ -56,4 +56,5 @@ difficult part first.
 - Added info page on LaunchPage, will add bounds later today
 - Added bounds as of 2022/02/20
 - Got rid of terminal outputs.
-- Renamed LaunchPage -> MainPage as it's the main part that holds everything together lol.
+- Renamed LaunchPage -> MainPage
+- Renamed NewWindow -> RegisterWindow
