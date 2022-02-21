@@ -11,6 +11,7 @@ public class MainPage implements ActionListener{
     JFrame frame = new JFrame();
     JButton registerButton = new JButton("Register");
     JButton loginButton = new JButton("Login");
+    JButton resetButton = new JButton("Reset");
     JLabel usernameLabel = new JLabel("Username");
     JTextField usernameText = new JTextField("Username");
     JLabel passwordLabel = new JLabel("Password");
@@ -23,6 +24,7 @@ public class MainPage implements ActionListener{
         frame.add(usernameText);
         frame.add(passwordLabel);
         frame.add(passwordField);
+        frame.add(resetButton);
 
         frame.getContentPane().setBackground(Color.darkGray);
         frame.setTitle("Main 1.0");
@@ -54,6 +56,13 @@ public class MainPage implements ActionListener{
             creatUserFile(user, password);
 
         });
+        resetButton.setBounds(0, 200, 100, 20);
+        resetButton.setFont(new Font(null, Font.PLAIN, 10));
+        resetButton.addActionListener(onClick -> {
+            usernameText.setText("");
+            passwordField.setText("");
+        });
+
     }
     @Override
     public void actionPerformed(ActionEvent e) {

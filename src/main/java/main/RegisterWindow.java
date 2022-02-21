@@ -14,6 +14,7 @@ public class RegisterWindow {
     JPasswordField textPassword = new JPasswordField("Password");
     JPasswordField activationCodeInput = new JPasswordField("Code");
     JButton registerButton = new JButton("Register");
+    JButton resetButton = new JButton("Reset");
     JLabel errorLabel = new JLabel("Error!");
     JCheckBox checkBox1 = new JCheckBox("SavePassword");
 
@@ -27,6 +28,7 @@ public class RegisterWindow {
         frame.add(registerButton);
         frame.add(checkBox1);
         frame.add(errorLabel);
+        frame.add(resetButton);
 
         frame.setTitle("Register 1.0");
         frame.setResizable(false);
@@ -64,6 +66,13 @@ public class RegisterWindow {
             String activationcode = activationCodeInput.getText();
             creatUserFile(user, password, activationcode);
 
+        });
+        resetButton.setBounds(0, 220, 120, 20);
+        resetButton.setFont(new Font(null, Font.PLAIN, 10));
+        resetButton.addActionListener(onClick -> {
+            textUsername.setText("");
+            textPassword.setText("");
+            activationCodeInput.setText("");
         });
     }
 
