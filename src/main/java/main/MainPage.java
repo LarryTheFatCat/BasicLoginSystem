@@ -5,7 +5,7 @@ import java.awt.event.*;
 import java.io.*;
 import javax.swing.*;
 
-public class LaunchPage implements ActionListener{
+public class MainPage implements ActionListener{
 
     JFrame frame = new JFrame();
     JButton registerButton = new JButton("Register");
@@ -15,7 +15,7 @@ public class LaunchPage implements ActionListener{
     JLabel passwordLabel = new JLabel("Password");
     JPasswordField passwordField = new JPasswordField("Password");
 
-    LaunchPage(){
+    MainPage(){
         frame.add(registerButton);
         frame.add(loginButton);
         frame.add(usernameLabel);

@@ -10,7 +10,6 @@ public class NewWindow {
     JLabel usernamelabel = new JLabel("Username");
     JLabel passwordLabel = new JLabel("Password");
     JLabel activationCode = new JLabel("Code");
-    JLabel successLabel = new JLabel("Success!");
     JTextField textUsername = new JTextField("Username");
     JPasswordField textPassword = new JPasswordField("Password");
     JPasswordField activationCodeInput = new JPasswordField("Code");
