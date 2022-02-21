@@ -57,7 +57,7 @@ public class MainPage implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==registerButton) {
-            NewWindow myWindow = new NewWindow();
+            RegisterWindow myWindow = new RegisterWindow();
         }
     }
     private void creatUserFile(String username, String password) {

@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.io.*;
 
-public class NewWindow {
+public class RegisterWindow {
 
     JFrame frame = new JFrame();
     JLabel usernamelabel = new JLabel("Username");
@@ -17,7 +17,7 @@ public class NewWindow {
     JLabel errorLabel = new JLabel("Error!");
     JCheckBox checkBox1 = new JCheckBox("SavePassword");
 
-    NewWindow() {
+    RegisterWindow() {
         frame.add(usernamelabel);
         frame.add(textUsername);
         frame.add(passwordLabel);
