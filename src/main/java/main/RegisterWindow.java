@@ -9,7 +9,7 @@ public class RegisterWindow {
     JFrame frame = new JFrame();
     JLabel usernamelabel = new JLabel("Username");
     JLabel passwordLabel = new JLabel("Password");
-    JLabel activationCode = new JLabel("Code");
+    JLabel activationCode = new JLabel("ActivationCode");
     JTextField textUsername = new JTextField("Username");
     JPasswordField textPassword = new JPasswordField("Password");
     JPasswordField activationCodeInput = new JPasswordField("Code");
@@ -54,7 +54,6 @@ public class RegisterWindow {
         // x y w h
         checkBox1.setBounds(0, 240, 120, 20);
         checkBox1.addActionListener(onClick -> {
-            System.out.println("True"); // puts true in terminal whenClicked!
         });
 
         registerButton.setBounds(67, 60, 100, 20);
