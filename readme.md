@@ -39,7 +39,7 @@ difficult part first.
 - Day 1:
 - Built the entire System
 - Focusing on Register until further notice 
-- Made background on register darkgrey 
+- Made background on register darkGray 
 - made text white
 - Added checkBox1
 
@@ -68,3 +68,4 @@ difficult part first.
 - Not sure what to do now lol
 - Changed Main -> LoginManager
 - Updated readme.md to accurately display info.
+- Finished Register, finished Login. Not too sure what's left.
