@@ -1,6 +1,6 @@
 package main;
 
-public class Main {
+public class LoginManager {
 
     public static void main(String[] args) {
 

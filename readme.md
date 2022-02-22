@@ -8,26 +8,25 @@
 lots of people should be able to read it with my code that I have ported. 
 
 # Features
-- Launch page.
+- Login Page
 - The launch page has a loginButton and registerButton, the register button goes into a new window (that's why there's the NewWindowClass)
 and displays the code that should eventually say Username:, Password:, Activation Code:, Register:. Once you click register,
 it should pop a text that says: Register Successful. Hopefully in the future I can figure out how to save the preset to a database.
 
 
-- NewWindow.
-- The NewWindow Class is the popUp that shows after you click Register. 
+- Register Window.
+- Too "Register an account" you can click this and it opens a new window, once you click 'Register' it creates a txt with the info. 
 
 
-- Main.
-- Not fully developed. Soon^TM
+- Main Manager.
+- Manager for LoginPage
+
 
 
 # Requirements
-- A brain
-- Java 15 
-- If you really want this to work, you would have to link this to a dataBase, when you link it with sqr, then have the auth jar generate a code
-that if you input it into here, it checks the main dataBase and if it's checked and it is correct it allows the user to pass through the auth. Obviously this is a lot easier
-if you just use NetBeans IDE and JFX, but this is your choice but I honestly wouldn't use this nor will anyone lol.
+- Decent understanding of Swing and Java in general
+- Java 15
+- If you want this to be a real login system, link it to a sql dataBase, I don't really know how to do it but if you make a pr ab it I would merge it.
 
 # Images 
 
@@ -67,3 +66,5 @@ difficult part first.
 - Changed MainWindow -> LoginPage
 - Changed RegisterWindow -> RegisterPage
 - Not sure what to do now lol
+- Changed Main -> LoginManager
+- Updated readme.md to accurately display info.
