@@ -4,9 +4,8 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 import javax.swing.*;
-import javax.swing.plaf.ColorUIResource;
 
-public class MainPage implements ActionListener{
+public class LoginPage implements ActionListener{
 
     JFrame frame = new JFrame();
     JButton registerButton = new JButton("Register");
@@ -17,7 +16,7 @@ public class MainPage implements ActionListener{
     JLabel passwordLabel = new JLabel("Password");
     JPasswordField passwordField = new JPasswordField("Password");
 
-    MainPage(){
+    LoginPage(){
         frame.add(registerButton);
         frame.add(loginButton);
         frame.add(usernameLabel);
@@ -27,7 +26,7 @@ public class MainPage implements ActionListener{
         frame.add(resetButton);
 
         frame.getContentPane().setBackground(Color.darkGray);
-        frame.setTitle("Main 1.0");
+        frame.setTitle("Login");
         frame.setResizable(false);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(700,300);
@@ -67,7 +66,7 @@ public class MainPage implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==registerButton) {
-            RegisterWindow myWindow = new RegisterWindow();
+            RegisterPage myWindow = new RegisterPage();
         }
     }
     private void creatUserFile(String username, String password) {

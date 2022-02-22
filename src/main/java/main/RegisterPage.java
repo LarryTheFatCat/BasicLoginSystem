@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.io.*;
 
-public class RegisterWindow {
+public class RegisterPage {
 
     JFrame frame = new JFrame();
     JLabel usernamelabel = new JLabel("Username");
@@ -18,7 +18,7 @@ public class RegisterWindow {
     JLabel errorLabel = new JLabel("Error!");
     JCheckBox checkBox1 = new JCheckBox("SavePassword");
 
-    RegisterWindow() {
+    RegisterPage() {
         frame.add(usernamelabel);
         frame.add(textUsername);
         frame.add(passwordLabel);
@@ -30,7 +30,7 @@ public class RegisterWindow {
         frame.add(errorLabel);
         frame.add(resetButton);
 
-        frame.setTitle("Register 1.0");
+        frame.setTitle("Register");
         frame.setResizable(false);
         frame.getContentPane().setBackground(Color.darkGray);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

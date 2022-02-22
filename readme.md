@@ -64,3 +64,5 @@ difficult part first.
 - added ResetButton to MM and RegisterWindow
 - Will not port to SQL server
 - Removed photos in resources
+- Changed MainWindow -> LoginPage
+- Changed RegisterWindow -> RegisterPage

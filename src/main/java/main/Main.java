@@ -4,6 +4,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-        MainPage launchPage = new MainPage();
+        LoginPage launchPage = new LoginPage();
     }
 }
