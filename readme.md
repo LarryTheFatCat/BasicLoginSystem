@@ -68,4 +68,4 @@ difficult part first.
 - Not sure what to do now lol
 - Changed Main -> LoginManager
 - Updated readme.md to accurately display info.
-- Finished Register, finished Login. Not too sure what's left.
+- Finished Register, finished Login. Not to sure what's left.
