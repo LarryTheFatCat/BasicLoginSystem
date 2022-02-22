@@ -66,3 +66,4 @@ difficult part first.
 - Removed photos in resources
 - Changed MainWindow -> LoginPage
 - Changed RegisterWindow -> RegisterPage
+- Not sure what to do now lol
