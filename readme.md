@@ -69,3 +69,7 @@ difficult part first.
 - Changed Main -> LoginManager
 - Updated readme.md to accurately display info.
 - Finished Register, finished Login. Not to sure what's left.
+
+
+- Day 5 
+- Going to test port to Sql dataBase!
