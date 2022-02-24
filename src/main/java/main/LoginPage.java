@@ -1,10 +1,11 @@
 package main;
 
-import java.awt.*;
-import java.awt.event.*;
-import java.io.*;
-import java.util.Scanner;
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 
 public class LoginPage implements ActionListener{
 

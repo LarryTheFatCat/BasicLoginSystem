@@ -2,9 +2,9 @@ plugins {
     id 'java'
 }
 
-group 'main.Main'
+group 'main.LoginManager'
 version '1.0'
-archivesBaseName = 'Main'
+archivesBaseName = 'SwingGUI'
 
 repositories {
     mavenCentral()
@@ -20,7 +20,7 @@ test {
 }
 jar {
     manifest {
-        attributes "Main-Class": "main.Main"
+        attributes "Main-Class": "main.LoginManager"
     }
 
     from {
