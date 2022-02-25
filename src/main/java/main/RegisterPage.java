@@ -33,7 +33,6 @@ public class RegisterPage {
         frame.setTitle("Register");
         frame.setResizable(false);
         frame.getContentPane().setBackground(Color.darkGray);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(800, 300);
         frame.setLayout(null);
         frame.setVisible(true);
