@@ -75,3 +75,8 @@ difficult part first.
 
 - Day 8
 - Deleted System, I realized I hard coded everything and will be rewriting the sys soon.^TM
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 
+- Day ?????
+- Will be rewriting the System with NetBeans IDE and as well as linking using MySQL, server will be up and running hosted via server I will purchase soon :terminal
