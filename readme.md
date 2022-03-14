@@ -36,20 +36,20 @@ difficult part first.
 
 # Updates
 
-- Day 1:
+- Update 1:
 - Built the entire System
 - Focusing on Register until further notice 
 - Made background on register darkGray 
 - made text white
 - Added checkBox1
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-- Day 2
+- Update 2
 - Implmented a couple lines of code that wheneverClicked register it saves the line of code and creates text file.
 - Changed the title of registerMode.
 - Changed the title of the launchPage.
 - Just tested the clickAction -> creates .txt that stores pword via desktop and works!
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-- Day 3 
+- Update 3 
 - Added github worflows so anyone can download any commit.
 - removed workflows
 - Added info page on LaunchPage, will add bounds later today
@@ -58,7 +58,7 @@ difficult part first.
 - Renamed LaunchPage -> MainPage
 - Renamed NewWindow -> RegisterWindow
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-- Day 4
+- Update 4
 - Made savedInfo .txt -> .json
 - added ResetButton to MM and RegisterWindow
 - Will not port to SQL server
@@ -70,13 +70,17 @@ difficult part first.
 - Updated readme.md to accurately display info.
 - Finished Register, finished Login. Not to sure what's left.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-- Day 5 
+- Update 5 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-- Day 8
+- Update 8
 - Deleted System, I realized I hard coded everything and will be rewriting the sys soon.^TM
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  
-- Day ?????
-- Will be rewriting the System with NetBeans IDE and as well as linking using MySQL, server will be up and running hosted via server I will purchase soon :terminal
+- Update 9
+- - Will be rewriting the System with NetBeans IDE and as well as linking using MySQL, server will be up and running hosted via server I will purchase soon :terminal
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+- Update 10
+- Ok so, change of plans im making this a installer for java.
