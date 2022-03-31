@@ -10,9 +10,9 @@ public class RegisterPage {
     JLabel usernameLabel = new JLabel("Username");
     JLabel passwordLabel = new JLabel("Password");
     JLabel activationCode = new JLabel("ActivationCode");
-    JTextField textUsername = new JTextField("Username");
-    JPasswordField textPassword = new JPasswordField("Password");
-    JPasswordField activationCodeInput = new JPasswordField("Code");
+    JTextField textUsername = new JTextField("");
+    JPasswordField textPassword = new JPasswordField("");
+    JPasswordField activationCodeInput = new JPasswordField("");
     JButton registerButton = new JButton("Register");
     JButton resetButton = new JButton("Reset");
     JCheckBox saveInfo = new JCheckBox("SaveInfo");

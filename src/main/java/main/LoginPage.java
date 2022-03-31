@@ -13,9 +13,9 @@ public class LoginPage implements ActionListener{
     JButton loginButton = new JButton("Login");
     JButton resetButton = new JButton("Reset");
     JLabel usernameLabel = new JLabel("Username");
-    JTextField usernameText = new JTextField("Username");
+    JTextField usernameText = new JTextField("");
     JLabel passwordLabel = new JLabel("Password");
-    JPasswordField passwordField = new JPasswordField("Password");
+    JPasswordField passwordField = new JPasswordField("");
     JCheckBox saveInfo = new JCheckBox("SaveInfo");
 
     LoginPage(){
@@ -63,6 +63,8 @@ public class LoginPage implements ActionListener{
 
         loginButton.setBounds(0,240,700,20);
         loginButton.setFont(new Font(null, Font.PLAIN, 10));
+        loginButton.addActionListener(evt -> JOptionPane.showMessageDialog(null, "Successful Login"));
+
 
         resetButton.setBounds(0, 200, 100, 20);
         resetButton.setFont(new Font(null, Font.PLAIN, 10));
