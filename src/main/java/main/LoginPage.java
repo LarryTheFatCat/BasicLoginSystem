@@ -16,6 +16,7 @@ public class LoginPage implements ActionListener{
     JTextField usernameText = new JTextField("Username");
     JLabel passwordLabel = new JLabel("Password");
     JPasswordField passwordField = new JPasswordField("Password");
+    JCheckBox saveInfo = new JCheckBox("SaveInfo");
 
     LoginPage(){
         frame.add(registerButton);
@@ -25,6 +26,7 @@ public class LoginPage implements ActionListener{
         frame.add(passwordLabel);
         frame.add(passwordField);
         frame.add(resetButton);
+        frame.add(saveInfo);
 
         frame.getContentPane().setBackground(Color.darkGray);
         frame.setTitle("Login");
@@ -48,14 +50,20 @@ public class LoginPage implements ActionListener{
         registerButton.setFocusable(false);
         registerButton.addActionListener(this);
 
-        loginButton.setBounds(0,240,700,20);
-        loginButton.setFont(new Font(null, Font.PLAIN, 10));
-        loginButton.addActionListener(onClick -> {
+        saveInfo.setBounds(0, 180, 100, 20);
+        saveInfo.setFocusable(false);
+        saveInfo.addActionListener(onClick -> {
             String user = usernameText.getText();
             String password = String.valueOf(passwordField.getPassword());
             creatUserFile(user, password);
-
+        /*
+        onClose -> creatUserFile -> AuthInfo.json -> store info.
+         */
         });
+
+        loginButton.setBounds(0,240,700,20);
+        loginButton.setFont(new Font(null, Font.PLAIN, 10));
+
         resetButton.setBounds(0, 200, 100, 20);
         resetButton.setFont(new Font(null, Font.PLAIN, 10));
         resetButton.addActionListener(onClick -> {

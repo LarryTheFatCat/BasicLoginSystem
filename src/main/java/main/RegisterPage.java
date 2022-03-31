@@ -7,7 +7,7 @@ import java.io.*;
 public class RegisterPage {
 
     JFrame frame = new JFrame();
-    JLabel usernamelabel = new JLabel("Username");
+    JLabel usernameLabel = new JLabel("Username");
     JLabel passwordLabel = new JLabel("Password");
     JLabel activationCode = new JLabel("ActivationCode");
     JTextField textUsername = new JTextField("Username");
@@ -15,20 +15,19 @@ public class RegisterPage {
     JPasswordField activationCodeInput = new JPasswordField("Code");
     JButton registerButton = new JButton("Register");
     JButton resetButton = new JButton("Reset");
-    JLabel errorLabel = new JLabel("Error!");
-    JCheckBox checkBox1 = new JCheckBox("SavePassword");
+    JCheckBox saveInfo = new JCheckBox("SaveInfo");
+
 
     RegisterPage() {
-        frame.add(usernamelabel);
+        frame.add(usernameLabel);
         frame.add(textUsername);
         frame.add(passwordLabel);
         frame.add(textPassword);
         frame.add(activationCode);
         frame.add(activationCodeInput);
         frame.add(registerButton);
-        frame.add(checkBox1);
-        frame.add(errorLabel);
         frame.add(resetButton);
+        frame.add(saveInfo);
 
         frame.setTitle("Register");
         frame.setResizable(false);
@@ -38,9 +37,9 @@ public class RegisterPage {
         frame.setVisible(true);
 
         textUsername.setBounds(67, 0, 100, 20);
-        usernamelabel.setBounds(0, 0, 100, 20);
-        usernamelabel.setFont(new Font(null, Font.PLAIN, 10));
-        usernamelabel.setForeground(Color.white);
+        usernameLabel.setBounds(0, 0, 100, 20);
+        usernameLabel.setFont(new Font(null, Font.PLAIN, 10));
+        usernameLabel.setForeground(Color.white);
 
         textPassword.setBounds(67, 20, 100, 20);
         passwordLabel.setBounds(0, 20, 100, 20);
@@ -51,21 +50,19 @@ public class RegisterPage {
         activationCode.setBounds(0, 40, 100, 20);
         activationCode.setFont(new Font(null, Font.PLAIN, 10));
         activationCode.setForeground(Color.white);
-
-        // x y w h
-        checkBox1.setBounds(0, 240, 120, 20);
-        checkBox1.addActionListener(onClick -> {
+        
+        saveInfo.setBounds(0, 240, 120, 20);
+        saveInfo.addActionListener(onClick -> {
+            String username = textUsername.getText();
+            String password = String.valueOf(textPassword.getPassword());
+            String activeCode = String.valueOf(activationCodeInput.getPassword());
+            creatUserFile(username, password, activeCode);
         });
 
         registerButton.setBounds(67, 60, 100, 20);
         registerButton.setFont(new Font(null, Font.PLAIN, 10));
-        registerButton.addActionListener(onClick -> {
-            String user = textUsername.getText();
-            String password = String.valueOf(textPassword.getPassword());
-            String activationcode = String.valueOf(activationCodeInput.getPassword());
-            creatUserFile(user, password, activationcode);
-
-        });
+        registerButton.addActionListener(evt -> JOptionPane.showMessageDialog(null, "Successful Register"));
+        
         resetButton.setBounds(0, 220, 120, 20);
         resetButton.setFont(new Font(null, Font.PLAIN, 10));
         resetButton.addActionListener(onClick -> {
