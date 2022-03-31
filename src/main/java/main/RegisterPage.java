@@ -61,8 +61,8 @@ public class RegisterPage {
         registerButton.setFont(new Font(null, Font.PLAIN, 10));
         registerButton.addActionListener(onClick -> {
             String user = textUsername.getText();
-            String password = textPassword.getText();
-            String activationcode = activationCodeInput.getText();
+            String password = String.valueOf(textPassword.getPassword());
+            String activationcode = String.valueOf(activationCodeInput.getPassword());
             creatUserFile(user, password, activationcode);
 
         });

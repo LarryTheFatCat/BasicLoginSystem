@@ -52,7 +52,7 @@ public class LoginPage implements ActionListener{
         loginButton.setFont(new Font(null, Font.PLAIN, 10));
         loginButton.addActionListener(onClick -> {
             String user = usernameText.getText();
-            String password = passwordField.getText();
+            String password = String.valueOf(passwordField.getPassword());
             creatUserFile(user, password);
 
         });
@@ -62,14 +62,15 @@ public class LoginPage implements ActionListener{
             usernameText.setText("");
             passwordField.setText("");
         });
-
     }
+
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==registerButton) {
             RegisterPage myWindow = new RegisterPage();
         }
     }
+
     private void creatUserFile(String username, String password) {
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("Auth-Info" + ".json"))) {
             bufferedWriter.write(username + ", " + password);
