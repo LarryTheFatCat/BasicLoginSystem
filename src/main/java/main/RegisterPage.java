@@ -19,6 +19,9 @@ public class RegisterPage {
 
 
     RegisterPage() {
+        /*
+        @TODO: Figure out how to make it so I don't have to do frame.add(input);
+         */
         frame.add(usernameLabel);
         frame.add(textUsername);
         frame.add(passwordLabel);
