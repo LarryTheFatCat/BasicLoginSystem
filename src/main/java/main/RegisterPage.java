@@ -15,13 +15,10 @@ public class RegisterPage {
     JPasswordField activationCodeInput = new JPasswordField("");
     JButton registerButton = new JButton("Register");
     JButton resetButton = new JButton("Reset");
-    JCheckBox saveInfo = new JCheckBox("SaveInfo");
+    JCheckBox saveInfo = new JCheckBox("Save Code");
 
 
     RegisterPage() {
-        /*
-        @TODO: Figure out how to make it so I don't have to do frame.add(input);
-         */
         frame.add(usernameLabel);
         frame.add(textUsername);
         frame.add(passwordLabel);
@@ -56,16 +53,15 @@ public class RegisterPage {
         
         saveInfo.setBounds(0, 240, 120, 20);
         saveInfo.addActionListener(onClick -> {
-            String username = textUsername.getText();
-            String password = String.valueOf(textPassword.getPassword());
+            String e = String.valueOf(textPassword.getPassword());
             String activeCode = String.valueOf(activationCodeInput.getPassword());
-            creatUserFile(username, password, activeCode);
+            creatUserFile(activeCode);
         });
 
         registerButton.setBounds(67, 60, 100, 20);
         registerButton.setFont(new Font(null, Font.PLAIN, 10));
         registerButton.addActionListener(evt -> JOptionPane.showMessageDialog(null, "Successful Register"));
-        
+
         resetButton.setBounds(0, 220, 120, 20);
         resetButton.setFont(new Font(null, Font.PLAIN, 10));
         resetButton.addActionListener(onClick -> {
@@ -75,9 +71,9 @@ public class RegisterPage {
         });
     }
 
-    private void creatUserFile(String username, String password, String activeCode) {
+    private void creatUserFile(String activeCode) {
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("Info" + ".json"))) {
-            bufferedWriter.write(username + ", " + password + ", " + activeCode);
+            bufferedWriter.write(activeCode);
         } catch (Exception exception) {
             System.out.println(exception.getMessage());
         }
