@@ -1,12 +1,11 @@
 package activationcode;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.util.*;
-import java.nio.charset.*;
+import java.nio.charset.StandardCharsets;
+import java.util.Random;
 
 /*
-
+    Not sure why I made this lol, i might make this a seperate jar then link this to sql
+    Using this as a activationcode input would be astronomical, but that won't  be here for a longgggggggggggg time
  */
 class Generator {
 
