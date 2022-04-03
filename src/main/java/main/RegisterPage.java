@@ -32,7 +32,7 @@ public class RegisterPage {
         frame.setTitle("Register");
         frame.setResizable(false);
         frame.getContentPane().setBackground(Color.darkGray);
-        frame.setSize(800, 300);
+        frame.setSize(700, 300);
         frame.setLayout(null);
         frame.setVisible(true);
 
@@ -51,14 +51,14 @@ public class RegisterPage {
         activationCode.setFont(new Font(null, Font.PLAIN, 10));
         activationCode.setForeground(Color.white);
         
-        saveInfo.setBounds(0, 240, 120, 20);
+        saveInfo.setBounds(0, 200, 120, 20);
         saveInfo.addActionListener(onClick -> {
             String e = String.valueOf(textPassword.getPassword());
             String activeCode = String.valueOf(activationCodeInput.getPassword());
             creatUserFile(activeCode);
         });
 
-        registerButton.setBounds(67, 60, 100, 20);
+        registerButton.setBounds(0, 240, 700, 20);
         registerButton.setFont(new Font(null, Font.PLAIN, 10));
         registerButton.addActionListener(evt -> JOptionPane.showMessageDialog(null, "Successful Register"));
 
