@@ -66,6 +66,7 @@ public class LoginPage implements ActionListener{
         loginButton.addActionListener(evt -> JOptionPane.showMessageDialog(null, "Successful Login"));
 
 
+
         resetButton.setBounds(0, 200, 100, 20);
         resetButton.setFont(new Font(null, Font.PLAIN, 10));
         resetButton.addActionListener(onClick -> {
