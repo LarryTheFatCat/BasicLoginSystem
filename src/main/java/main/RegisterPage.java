@@ -10,8 +10,8 @@ public class RegisterPage {
     JLabel usernameLabel = new JLabel("Username");
     JLabel passwordLabel = new JLabel("Password");
     JLabel activationCode = new JLabel("ActivationCode");
-    JTextField textUsername = new JTextField("");
-    JPasswordField textPassword = new JPasswordField("");
+    JTextField usernameText = new JTextField("");
+    JPasswordField passwordField = new JPasswordField("");
     JPasswordField activationCodeInput = new JPasswordField("");
     JButton registerButton = new JButton("Register");
     JButton resetButton = new JButton("Reset");
@@ -20,9 +20,9 @@ public class RegisterPage {
 
     RegisterPage() {
         frame.add(usernameLabel);
-        frame.add(textUsername);
+        frame.add(usernameText);
         frame.add(passwordLabel);
-        frame.add(textPassword);
+        frame.add(passwordField);
         frame.add(activationCode);
         frame.add(activationCodeInput);
         frame.add(registerButton);
@@ -36,37 +36,37 @@ public class RegisterPage {
         frame.setLayout(null);
         frame.setVisible(true);
 
-        textUsername.setBounds(67, 0, 100, 20);
-        usernameLabel.setBounds(0, 0, 100, 20);
-        usernameLabel.setFont(new Font(null, Font.PLAIN, 10));
+        usernameText.setBounds(55, 100, 700, 20);
+        usernameLabel.setBounds(0, 100, 100, 20);
+        usernameLabel.setFont(new Font(null, Font.PLAIN, 12));
         usernameLabel.setForeground(Color.white);
 
-        textPassword.setBounds(67, 20, 100, 20);
-        passwordLabel.setBounds(0, 20, 100, 20);
-        passwordLabel.setFont(new Font(null, Font.PLAIN, 10));
+        passwordField.setBounds(55, 140, 700, 20);
+        passwordLabel.setBounds(0, 140, 100, 20);
+        passwordLabel.setFont(new Font(null, Font.PLAIN, 12));
         passwordLabel.setForeground(Color.white);
 
-        activationCodeInput.setBounds(67, 40, 100, 20);
-        activationCode.setBounds(0, 40, 100, 20);
-        activationCode.setFont(new Font(null, Font.PLAIN, 10));
+        activationCodeInput.setBounds(60, 140, 700, 20);
+        activationCode.setBounds(0, 160, 100, 20);
+        activationCode.setFont(new Font(null, Font.PLAIN, 12));
         activationCode.setForeground(Color.white);
         
         saveInfo.setBounds(0, 200, 120, 20);
         saveInfo.addActionListener(onClick -> {
-            String e = String.valueOf(textPassword.getPassword());
+            String e = String.valueOf(passwordField.getPassword());
             String activeCode = String.valueOf(activationCodeInput.getPassword());
             creatUserFile(activeCode);
         });
 
-        registerButton.setBounds(0, 240, 700, 20);
+        registerButton.setBounds(0,240,700,20);
         registerButton.setFont(new Font(null, Font.PLAIN, 10));
         registerButton.addActionListener(evt -> JOptionPane.showMessageDialog(null, "Successful Register"));
 
         resetButton.setBounds(0, 220, 120, 20);
         resetButton.setFont(new Font(null, Font.PLAIN, 10));
         resetButton.addActionListener(onClick -> {
-            textUsername.setText("");
-            textPassword.setText("");
+            usernameText.setText("");
+            passwordField.setText("");
             activationCodeInput.setText("");
         });
     }
