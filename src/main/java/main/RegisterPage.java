@@ -18,6 +18,14 @@ public class RegisterPage {
     JCheckBox saveInfo = new JCheckBox("Save Code");
 
 
+    /*
+
+
+    @TODO: Polish up some stuff.
+
+
+     */
+
     RegisterPage() {
         frame.add(usernameLabel);
         frame.add(usernameText);
