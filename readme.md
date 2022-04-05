@@ -24,3 +24,4 @@
 - Changed Main -> LoginManager
 - Will be rewriting the System with NetBeans IDE and as well as linking using MySQL, server will be up and running hosted via server I will purchase soon :terminal
 - Some other things as well, but I forgot to commit.
+- General Bug Fixes
