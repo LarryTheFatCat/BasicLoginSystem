@@ -62,9 +62,7 @@ public class LoginPage implements ActionListener{
         loginButton.setBounds(0,240,700,20);
         loginButton.setFont(new Font(null, Font.PLAIN, 10));
         loginButton.addActionListener(evt -> JOptionPane.showMessageDialog(null, "Successful Login"));
-
-
-
+        
         resetButton.setBounds(0, 200, 100, 20);
         resetButton.setFont(new Font(null, Font.PLAIN, 10));
         resetButton.addActionListener(onClick -> {
@@ -85,6 +83,8 @@ public class LoginPage implements ActionListener{
         LoginPage launchPage = new LoginPage();
     }
 
+
+    // create user file when jbuttonclick refer to line 56 to 60.
     private void creatUserFile(String username, String password) {
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("Auth-Info" + ".json"))) {
             bufferedWriter.write(username + ", " + password);
