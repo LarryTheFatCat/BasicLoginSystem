@@ -21,7 +21,7 @@ public class RegisterPage {
     /*
 
 
-    @TODO: Polish up some stuff.
+    @TODO: Polish up some features.
 
 
      */

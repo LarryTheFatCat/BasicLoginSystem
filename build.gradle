@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group 'main.LoginManager'
+group 'main.LoginPage'
 version '1.0'
 archivesBaseName = 'SwingGUI'
 
@@ -20,7 +20,7 @@ test {
 }
 jar {
     manifest {
-        attributes "Main-Class": "main.LoginManager"
+        attributes "Main-Class": "main.LoginPage"
     }
 
     from {

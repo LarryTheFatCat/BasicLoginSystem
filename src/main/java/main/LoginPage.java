@@ -7,6 +7,11 @@ import java.awt.event.*;
 
 
 public class LoginPage implements ActionListener{
+    /*
+        @TODO: Polish some features.
+     */
+
+
 
     JFrame frame = new JFrame();
     JButton registerButton = new JButton("Register");
@@ -86,5 +91,10 @@ public class LoginPage implements ActionListener{
         } catch (Exception exception) {
             System.out.println(exception.getMessage());
         }
+    }
+
+    public static void main(String[] args) {
+
+        LoginPage launchPage = new LoginPage();
     }
 }
