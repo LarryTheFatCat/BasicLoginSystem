@@ -2,7 +2,8 @@ package main;
 
 import javax.swing.*;
 import java.awt.*;
-import java.io.*;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 
 public class RegisterPage {
 
@@ -49,7 +50,7 @@ public class RegisterPage {
         activationCode.setBounds(0, 180, 100, 20);
         activationCode.setFont(new Font(null, Font.PLAIN, 12));
         activationCode.setForeground(Color.white);
-        
+
         saveInfo.setBounds(0, 200, 120, 20);
         saveInfo.addActionListener(onClick -> {
             String e = String.valueOf(passwordField.getPassword());
@@ -57,7 +58,7 @@ public class RegisterPage {
             creatUserFile(activeCode);
         });
 
-        registerButton.setBounds(0,240,700,20);
+        registerButton.setBounds(0, 240, 700, 20);
         registerButton.setFont(new Font(null, Font.PLAIN, 10));
         registerButton.addActionListener(evt -> JOptionPane.showMessageDialog(null, "Successful Register"));
 
