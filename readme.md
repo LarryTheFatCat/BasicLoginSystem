@@ -1,7 +1,6 @@
 # SwingGUI Rewrite
 - I stopped working on the old one because I got lazy and forgot everything I did, some parts are partially skidded as well (lol)
 - I deleted the old version because I didn't like it.
-- 
 # Requirements
 - Java 15
 - Swing isn't hard to understand, I would just recommend using JavaFX, a lot easier and more fun then Swing.
