@@ -5,7 +5,6 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 
-
 public class LoginPage implements ActionListener {
 
     JFrame frame = new JFrame();
