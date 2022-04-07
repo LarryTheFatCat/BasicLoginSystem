@@ -7,7 +7,7 @@
 # Requirements
 
 - Java 15
-- Swing isn't hard to understand, I would just recommend using JavaFX, a lot easier and more fun then Swing.
+- Swing isn't hard to understand, I would just recommend using JavaFX, a lot easier and more fun than Swing.
 
 # Updates long ago.
 
