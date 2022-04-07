@@ -2,10 +2,8 @@ package main;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
+import java.awt.event.*;
+import java.io.*;
 
 
 public class LoginPage implements ActionListener {
@@ -56,10 +54,14 @@ public class LoginPage implements ActionListener {
         saveInfo.setBounds(0, 180, 100, 20);
         saveInfo.setFocusable(false);
         saveInfo.addActionListener(onClick -> {
-            String user = userInput.getText();
-            String password = String.valueOf(passwordField.getPassword());
-            creatUserFile(user, password);        // store password in text file
+            String user = userInput.getText(); // gets the text in userInputString
+            String password = String.valueOf(passwordField.getPassword()); // gets the text in passwordField
+            creatUserFile(user, password);  // store info, refer for more info, refer to line 93
         });
+
+            /*
+            @NOTE: I had to use String.valueOf(passwordField.getPassword()); because getPassword(); was deprecated :-(
+             */
 
         loginButton.setBounds(0, 240, 700, 20);
         loginButton.setFont(new Font(null, Font.PLAIN, 10));
@@ -85,7 +87,7 @@ public class LoginPage implements ActionListener {
         }
     }
 
-    // create user file when jbuttonclick refer to line 56 to 60.
+    // create user file whenClicked(); refer to line 56 to 60.
     private void creatUserFile(String username, String password) {
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("Auth-Info" + ".json"))) {
             bufferedWriter.write(username + ", " + password);
