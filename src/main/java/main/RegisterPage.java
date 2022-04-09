@@ -74,7 +74,7 @@ public class RegisterPage {
 
     // create user file when jbuttonclick refer to line 54 to 58.
     private void creatUserFile(String activeCode) {
-        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("Info" + ".json"))) {
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("Register-Info" + ".json"))) {
             bufferedWriter.write(activeCode);
         } catch (Exception exception) {
             System.out.println(exception.getMessage());

@@ -88,7 +88,7 @@ public class LoginPage implements ActionListener {
 
     // create user file whenClicked(); refer to line 56 to 60.
     private void creatUserFile(String username, String password) {
-        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("Auth-Info" + ".json"))) {
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("Login-Info" + ".json"))) {
             bufferedWriter.write(username + ", " + password);
         } catch (Exception exception) {
             System.out.println(exception.getMessage());
