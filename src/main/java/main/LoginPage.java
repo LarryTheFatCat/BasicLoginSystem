@@ -2,23 +2,56 @@ package main;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.*;
 
+/**
+ * The type Login page.
+ */
 public class LoginPage implements ActionListener {
 
+    /**
+     * The Frame.
+     */
     JFrame frame = new JFrame();
+    /**
+     * The Register.
+     */
     JButton register = new JButton("Register");
+    /**
+     * The Login button.
+     */
     JButton loginButton = new JButton("Login");
+    /**
+     * The Reset button.
+     */
     JButton resetButton = new JButton("Reset");
+    /**
+     * The Username.
+     */
     JLabel username = new JLabel("Username");
+    /**
+     * The User input.
+     */
     JTextField userInput = new JTextField("");
+    /**
+     * The Password.
+     */
     JLabel password = new JLabel("Password");
+    /**
+     * The Password field.
+     */
     JPasswordField passwordField = new JPasswordField("");
+    /**
+     * The Save info.
+     */
     JCheckBox saveInfo = new JCheckBox("SaveInfo");
 
+    /**
+     * Instantiates a new Login page.
+     */
     LoginPage() {
-        // If new appearance, add below.
         frame.add(register);
         frame.add(loginButton);
         frame.add(username);
@@ -53,14 +86,12 @@ public class LoginPage implements ActionListener {
         saveInfo.setBounds(0, 180, 100, 20);
         saveInfo.setFocusable(false);
         saveInfo.addActionListener(onClick -> {
-            String user = userInput.getText(); // gets the text in userInputString
-            String password = String.valueOf(passwordField.getPassword()); // gets the text in passwordField
-            creatUserFile(user, password);  // store info, refer for more info, refer to line 93
+            String user = userInput.getText();
+            String password = String.valueOf(passwordField.getPassword());
+            creatUserFile(user, password);
         });
 
-            /*
-            @NOTE: I had to use String.valueOf(passwordField.getPassword()); because getPassword(); was deprecated :-(
-             */
+
 
         loginButton.setBounds(0, 240, 700, 20);
         loginButton.setFont(new Font(null, Font.PLAIN, 10));
@@ -74,6 +105,11 @@ public class LoginPage implements ActionListener {
         });
     }
 
+    /**
+     * The entry point of application.
+     *
+     * @param args the input arguments
+     */
     public static void main(String[] args) {
 
         LoginPage launchPage = new LoginPage();
@@ -86,7 +122,6 @@ public class LoginPage implements ActionListener {
         }
     }
 
-    // create user file whenClicked(); refer to line 56 to 60.
     private void creatUserFile(String username, String password) {
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("Login-Info" + ".json"))) {
             bufferedWriter.write(username + ", " + password);

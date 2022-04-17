@@ -5,19 +5,55 @@ import java.awt.*;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 
+/**
+ * The type Register page.
+ */
 public class RegisterPage {
 
+    /**
+     * The Frame.
+     */
     JFrame frame = new JFrame();
+    /**
+     * The Username label.
+     */
     JLabel usernameLabel = new JLabel("Username:");
+    /**
+     * The Password label.
+     */
     JLabel passwordLabel = new JLabel("Password");
+    /**
+     * The Activation code.
+     */
     JLabel activationCode = new JLabel("Code:");
+    /**
+     * The Username text.
+     */
     JTextField usernameText = new JTextField("");
+    /**
+     * The Password field.
+     */
     JPasswordField passwordField = new JPasswordField("");
+    /**
+     * The Activation input.
+     */
     JPasswordField activationInput = new JPasswordField("");
+    /**
+     * The Register button.
+     */
     JButton registerButton = new JButton("Register");
+    /**
+     * The Reset button.
+     */
     JButton resetButton = new JButton("Reset");
+    /**
+     * The Save info.
+     */
     JCheckBox saveInfo = new JCheckBox("SaveCode");
 
+    /**
+     * Instantiates a new Register page.
+     */
     RegisterPage() {
         frame.add(usernameLabel);
         frame.add(usernameText);
@@ -72,7 +108,6 @@ public class RegisterPage {
     }
 
 
-    // create user file when jbuttonclick refer to line 54 to 58.
     private void creatUserFile(String activeCode) {
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("Register-Info" + ".json"))) {
             bufferedWriter.write(activeCode);
