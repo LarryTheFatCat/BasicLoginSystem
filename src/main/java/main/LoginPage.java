@@ -4,7 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.*;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 
 /**
  * The type Login page.
@@ -90,7 +91,6 @@ public class LoginPage implements ActionListener {
             String password = String.valueOf(passwordField.getPassword());
             creatUserFile(user, password);
         });
-
 
 
         loginButton.setBounds(0, 240, 700, 20);

@@ -89,7 +89,7 @@ public class RegisterPage {
 
         saveInfo.setBounds(0, 200, 120, 20);
         saveInfo.addActionListener(onClick -> {
-            String e = String.valueOf(passwordField.getPassword());
+            passwordField.getPassword();
             String activeCode = String.valueOf(activationInput.getPassword());
             creatUserFile(activeCode);
         });
