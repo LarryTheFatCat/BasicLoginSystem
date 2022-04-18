@@ -12,6 +12,9 @@ import java.io.FileWriter;
  */
 public class LoginPage implements ActionListener {
 
+    public static void main(String[] args) {
+        LoginPage launchPage = new LoginPage();
+    }
     /**
      * The Frame.
      */
@@ -62,7 +65,6 @@ public class LoginPage implements ActionListener {
         frame.add(resetButton);
         frame.add(saveInfo);
 
-        frame.getContentPane().setBackground(Color.darkGray);
         frame.setTitle("Login");
         frame.setResizable(false);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -70,15 +72,13 @@ public class LoginPage implements ActionListener {
         frame.setLayout(null);
         frame.setVisible(true);
 
-        username.setBounds(0, 100, 100, 20);
+        username.setBounds(20   , 100, 100, 20);
         username.setFont(new Font(null, Font.PLAIN, 12));
-        username.setForeground(Color.white);
-        userInput.setBounds(55, 100, 700, 20);
+        userInput.setBounds(120, 100, 700, 20);
 
-        password.setBounds(0, 140, 100, 20);
+        password.setBounds(20, 140, 100, 20);
         password.setFont(new Font(null, Font.PLAIN, 12));
-        passwordField.setBounds(55, 140, 700, 20);
-        password.setForeground(Color.white);
+        passwordField.setBounds(120, 140, 700, 20);
 
         register.setBounds(0, 220, 100, 20);
         register.setFocusable(false);
@@ -105,20 +105,11 @@ public class LoginPage implements ActionListener {
         });
     }
 
-    /**
-     * The entry point of application.
-     *
-     * @param args the input arguments
-     */
-    public static void main(String[] args) {
-
-        LoginPage launchPage = new LoginPage();
-    }
-
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == register) {
             RegisterPage myWindow = new RegisterPage();
+
         }
     }
 

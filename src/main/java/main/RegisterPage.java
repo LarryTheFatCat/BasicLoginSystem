@@ -25,7 +25,7 @@ public class RegisterPage {
     /**
      * The Activation code.
      */
-    JLabel activationCode = new JLabel("Code:");
+    JLabel activationCode = new JLabel("Activation Code:");
     /**
      * The Username text.
      */
@@ -49,7 +49,7 @@ public class RegisterPage {
     /**
      * The Save info.
      */
-    JCheckBox saveInfo = new JCheckBox("SaveCode");
+    JCheckBox saveInfo = new JCheckBox("Remember Me");
 
     /**
      * Instantiates a new Register page.
@@ -67,25 +67,21 @@ public class RegisterPage {
 
         frame.setTitle("Register");
         frame.setResizable(false);
-        frame.getContentPane().setBackground(Color.darkGray);
         frame.setSize(700, 300);
         frame.setLayout(null);
         frame.setVisible(true);
 
-        usernameText.setBounds(55, 100, 700, 20);
-        usernameLabel.setBounds(0, 100, 100, 20);
+        usernameText.setBounds(120, 100, 700, 20);
+        usernameLabel.setBounds(20, 100, 100, 20);
         usernameLabel.setFont(new Font(null, Font.PLAIN, 12));
-        usernameLabel.setForeground(Color.white);
 
-        passwordField.setBounds(55, 140, 700, 20);
-        passwordLabel.setBounds(0, 140, 100, 20);
+        passwordField.setBounds(120, 140, 700, 20);
+        passwordLabel.setBounds(20, 140, 100, 20);
         passwordLabel.setFont(new Font(null, Font.PLAIN, 12));
-        passwordLabel.setForeground(Color.white);
 
-        activationInput.setBounds(60, 180, 700, 20);
-        activationCode.setBounds(0, 180, 100, 20);
+        activationInput.setBounds(120, 180, 700, 20);
+        activationCode.setBounds(20, 180, 100, 20);
         activationCode.setFont(new Font(null, Font.PLAIN, 12));
-        activationCode.setForeground(Color.white);
 
         saveInfo.setBounds(0, 200, 120, 20);
         saveInfo.addActionListener(onClick -> {
