@@ -14,7 +14,9 @@ public class LoginPage implements ActionListener {
 
     public static void main(String[] args) {
         LoginPage launchPage = new LoginPage();
+
     }
+
     /**
      * The Frame.
      */
@@ -56,6 +58,7 @@ public class LoginPage implements ActionListener {
      * Instantiates a new Login page.
      */
     LoginPage() {
+
         frame.add(register);
         frame.add(loginButton);
         frame.add(username);
@@ -72,7 +75,7 @@ public class LoginPage implements ActionListener {
         frame.setLayout(null);
         frame.setVisible(true);
 
-        username.setBounds(20   , 100, 100, 20);
+        username.setBounds(20, 100, 100, 20);
         username.setFont(new Font(null, Font.PLAIN, 12));
         userInput.setBounds(120, 100, 700, 20);
 
