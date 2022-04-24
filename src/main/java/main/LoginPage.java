@@ -36,7 +36,7 @@ public class LoginPage implements ActionListener {
     /**
      * The Username.
      */
-    JLabel username = new JLabel("Username");
+    JLabel username = new JLabel("Username:");
     /**
      * The User input.
      */
@@ -44,7 +44,7 @@ public class LoginPage implements ActionListener {
     /**
      * The Password.
      */
-    JLabel password = new JLabel("Password");
+    JLabel password = new JLabel("Password:");
     /**
      * The Password field.
      */
@@ -84,7 +84,7 @@ public class LoginPage implements ActionListener {
         passwordField.setBounds(120, 140, 700, 20);
 
         register.setBounds(0, 220, 100, 20);
-        register.setFocusable(false);
+        register.setFocusable(true);
         register.addActionListener(this);
 
         saveInfo.setBounds(0, 180, 100, 20);
@@ -111,8 +111,8 @@ public class LoginPage implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == register) {
+            frame.dispose();
             RegisterPage myWindow = new RegisterPage();
-
         }
     }
 
