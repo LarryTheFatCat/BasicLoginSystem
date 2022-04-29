@@ -19,4 +19,8 @@ class RegisterPage {
     var registerButton = JButton("Register")
     var resetButton = JButton("Reset")
     var saveInfo = JCheckBox("Remember Me")
+
+    fun main() {
+
+    }
 }

@@ -1,3 +1,4 @@
+import java.awt.event.ActionEvent
 import javax.swing.*
 
 /**
@@ -17,4 +18,8 @@ class LoginPage {
     var passwordField = JPasswordField("")
     var saveInfo = JCheckBox("Remember")
 
+
+    fun main() {
+        val launchPage = LoginPage()
+    }
 }
