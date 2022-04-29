@@ -11,10 +11,10 @@ import java.io.FileWriter;
  * This is the LoginPage
  * @TODO: Convert to kotlin and use kts scripts :wink:
  */
-public class LoginPage implements ActionListener {
+public class LoginPageJava implements ActionListener {
 
     public static void main(String[] args) {
-        LoginPage launchPage = new LoginPage();
+        LoginPageJava launchPage = new LoginPageJava();
 
     }
 
@@ -59,7 +59,7 @@ public class LoginPage implements ActionListener {
      * Instantiates a new Login page.
      */
 
-    LoginPage() {
+    LoginPageJava() {
 
         frame.add(register);
         frame.add(loginButton);
@@ -111,13 +111,13 @@ public class LoginPage implements ActionListener {
     }
 
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == register) {
-            frame.dispose();
-            RegisterPage myWindow = new RegisterPage();
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            if (e.getSource() == register) {
+                frame.dispose();
+                RegisterPageJava myWindow = new RegisterPageJava();
+            }
         }
-    }
 
     private void creatUserFile(String username, String password) {
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("Login-Info" + ".json"))) {

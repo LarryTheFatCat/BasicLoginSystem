@@ -1,1 +1,0 @@
-rootProject.name = "JavaInstaller--1.0.1"

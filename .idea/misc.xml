@@ -12,7 +12,13 @@
     <option name="modulesWithSuppressedNotConfigured">
       <set>
         <option value="BasicInstaller" />
+        <option value="JavaInstaller--1.0.1" />
       </set>
+    </option>
+  </component>
+  <component name="SwUserDefinedSpecifications">
+    <option name="specTypeByUrl">
+      <map />
     </option>
   </component>
 </project>

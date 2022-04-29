@@ -10,7 +10,7 @@ import java.io.FileWriter;
  * @TODO: Convert to kotlin and use kts scripts :wink:
  */
 
-public class RegisterPage {
+public class RegisterPageJava {
 
     /**
      * The Frame.
@@ -56,7 +56,7 @@ public class RegisterPage {
     /**
      * Instantiates a new Register page.
      */
-    RegisterPage() {
+    RegisterPageJava() {
         frame.add(usernameLabel);
         frame.add(usernameText);
         frame.add(passwordLabel);
