@@ -7,7 +7,9 @@ import java.io.FileWriter;
 
 /**
  * The type Register page.
+ * @TODO: Convert to kotlin and use kts scripts :wink:
  */
+
 public class RegisterPage {
 
     /**

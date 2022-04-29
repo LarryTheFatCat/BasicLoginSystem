@@ -3,18 +3,13 @@ buildscript {
 
 apply plugin: 'java'
 
-group 'main.TestingClass'
+group 'main.LoginPage'
 version '1.0-SNAPSHOT'
 archivesBaseName = 'SwingApplication'
 
 repositories {
     mavenCentral()
 }
-/*
-dependencies {
-    compile group: 'com.formdev', name: 'flatlaf', version: '1.1.2'
-}
- */
 
 test {
     useJUnitPlatform()

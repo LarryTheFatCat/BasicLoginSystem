@@ -8,7 +8,8 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 
 /**
- * The type Login page.
+ * This is the LoginPage
+ * @TODO: Convert to kotlin and use kts scripts :wink:
  */
 public class LoginPage implements ActionListener {
 
@@ -57,6 +58,7 @@ public class LoginPage implements ActionListener {
     /**
      * Instantiates a new Login page.
      */
+
     LoginPage() {
 
         frame.add(register);
@@ -107,6 +109,7 @@ public class LoginPage implements ActionListener {
             passwordField.setText("");
         });
     }
+
 
     @Override
     public void actionPerformed(ActionEvent e) {
