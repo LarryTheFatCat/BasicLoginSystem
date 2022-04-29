@@ -2,7 +2,7 @@ import javax.swing.*
 
 /**
  * @author TwoOneTwo
- * @credits ily bush
+ * @creditsForHelp ily bush
  * This is the LoginPage AKA the mainClass
  */
 class LoginPage {
