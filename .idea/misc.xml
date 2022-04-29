@@ -8,4 +8,11 @@
     <option name="OUTPUT_DIRECTORY" value="$USER_HOME$/Konas" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_15" default="true" project-jdk-name="corretto-15" project-jdk-type="JavaSDK" />
+  <component name="SuppressABINotification">
+    <option name="modulesWithSuppressedNotConfigured">
+      <set>
+        <option value="BasicInstaller" />
+      </set>
+    </option>
+  </component>
 </project>
