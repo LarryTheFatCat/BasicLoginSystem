@@ -11,7 +11,6 @@ import java.io.FileWriter;
 
 /**
  * This is the LoginPage
- * @TODO: Convert to kotlin and use kts scripts :wink:
  */
 public class LoginPageJava implements ActionListener {
 
