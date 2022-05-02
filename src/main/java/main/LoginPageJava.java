@@ -2,6 +2,8 @@ package main;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedWriter;
@@ -21,7 +23,7 @@ public class LoginPageJava implements ActionListener {
     /**
      * The Frame.
      */
-    JFrame frame = new JFrame();
+    JFrame frame = new JFrame("Login");
     /**
      * The Register.
      */
@@ -70,9 +72,9 @@ public class LoginPageJava implements ActionListener {
         frame.add(resetButton);
         frame.add(saveInfo);
 
-        frame.setTitle("Login");
         frame.setResizable(false);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.getContentPane().setBackground(Color.darkGray);
         frame.setSize(700, 300);
         frame.setLayout(null);
         frame.setVisible(true);
@@ -80,10 +82,12 @@ public class LoginPageJava implements ActionListener {
         username.setBounds(20, 100, 100, 20);
         username.setFont(new Font(null, Font.PLAIN, 12));
         userInput.setBounds(120, 100, 700, 20);
+        username.setForeground(Color.WHITE);
 
         password.setBounds(20, 140, 100, 20);
         password.setFont(new Font(null, Font.PLAIN, 12));
         passwordField.setBounds(120, 140, 700, 20);
+        password.setForeground(Color.WHITE);
 
         register.setBounds(0, 220, 100, 20);
         register.setFocusable(true);
@@ -126,4 +130,5 @@ public class LoginPageJava implements ActionListener {
             System.out.println(exception.getMessage());
         }
     }
+
 }

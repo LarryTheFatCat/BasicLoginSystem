@@ -70,16 +70,19 @@ public class RegisterPageJava {
         frame.setTitle("Register");
         frame.setResizable(false);
         frame.setSize(700, 300);
+        frame.getContentPane().setBackground(Color.darkGray);
         frame.setLayout(null);
         frame.setVisible(true);
 
         usernameText.setBounds(120, 100, 700, 20);
         usernameLabel.setBounds(20, 100, 100, 20);
         usernameLabel.setFont(new Font(null, Font.PLAIN, 12));
+        usernameLabel.setForeground(Color.WHITE);
 
         passwordField.setBounds(120, 140, 700, 20);
         passwordLabel.setBounds(20, 140, 100, 20);
         passwordLabel.setFont(new Font(null, Font.PLAIN, 12));
+        passwordLabel.setForeground(Color.WHITE);
 
         activationInput.setBounds(120, 180, 700, 20);
         activationCode.setBounds(20, 180, 100, 20);

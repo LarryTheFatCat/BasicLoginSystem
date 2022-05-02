@@ -1,3 +1,164 @@
 # BasicInstaller :)
 - converting to kotlin cuz I love bush
 - Java 15
+
+
+
+# A Guide
+
+ ## LoginPageJava() {
+- Pretty much initializes anything inside of it, you always have to do this when you are using Java Swing
+ 
+
+```
+` LoginPageJava() {
+
+        frame.add(register);
+        frame.add(loginButton);
+        frame.add(username);
+        frame.add(userInput);
+        frame.add(password);
+        frame.add(passwordField);
+        frame.add(resetButton);
+        frame.add(saveInfo);
+
+        frame.setResizable(false);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(700, 300);
+        frame.setLayout(null);
+        frame.setVisible(true);  }
+```
+
+ ## frame.add(....);
+- To make anything visible, you first have to create the actual Frame.
+- In Swing, go to the LoginPageJava() {, and then create your frame outline.
+  - Make sure to create a variable for your frame (meaning JFrame frame = new JFrame(String-Title: "Example" ); )
+`    
+ ````
+    
+    JButton registerButton = new RegisterButton("Register");
+    JFrame frame = new JFrame("Login");
+
+  - LoginPageJava() {
+        // You do not need to add frame.add(frame); as it's already added :)
+        
+        frame.add(loginButton);
+        // Now, we can add the button to initialize it 
+
+        // lets make our first Module for the Swing GUI :)
+        // we are going to simplfy how the Register button works here :)
+        
+        loginButton.setBounds(0, 240, 700, 20); // Again, this just sets the boundries of the button.
+        loginButton.setFont(new Font(null, Font.PLAIN, 10)); // This is how you can set the font of the text inside the Button :)
+        loginButton.addActionListener(evt -> JOptionPane.showMessageDialog(null, "Successful Login")); // This is a lambda event where when the person who clicks on the JButton, it will send a Box saying "Successful Login".
+    
+
+
+        frame.setResizable(false); // Do you want to make the frame resizable? True -> Yes, false -> No.
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // How you want it to close, this is the best way as it force closes the Swing Application.
+        frame.setSize(700, 300); // The size of the frame, this is how you can set the width and height of the actual swing application
+        frame.setLayout(null); // Prevents NullPointerException? I don't really know I just have it here.
+        frame.setVisible(true); // This is very important has this checks if the frame is visible on your computer or not.
+
+
+}
+
+````
+
+## How to make a Second window Open up :)
+ - So, this is a complicated process, but I will simplify the process for you :)
+ ````
+
+// So, let's create a button to open up the second window
+// In this case, we can use the RegisterButton that we already created :)
+// If you read the previous document then you would be able to know how this works.
+
+
+        frame.add(registerButton); // CamelCase is very important in OOP(Object Oriented Programming):)
+        
+        
+        register.setBounds(0, 220, 100, 20);
+        register.setFocusable(true);
+        register.addActionListener(this);
+        
+        // Now for the fun stuff :D
+        // Check back to a couple lines above, we created a ActionListner for the register Button, now look at the code below.
+        // we are just creating a action event where when the Register Button is clicked, it will automatically get rid
+        of the login screen, and will open up the new window, there you can create a second class for the info <- AKA RegisterClassJava
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            if (e.getSource() == register) {
+                frame.dispose();
+                RegisterPageJava myWindow = new RegisterPageJava();
+            }
+        }
+````
+
+## How to save your information with a CheckBox :)
+````
+
+// So, you've come this far and you're wondering how to save your information for when users may not remember their password.
+// This may be a little complicated but I will walk this through 
+
+
+// First, we create our CheckBox :)
+
+        saveInfo.setBounds(0, 180, 100, 20);
+        saveInfo.setFocusable(false);
+        // Now, we create another event where it will get the information that is on UserInput and passwordField.
+        saveInfo.addActionListener(onClick -> {
+            String user = userInput.getText();
+            String password = String.valueOf(passwordField.getPassword());
+            creatUserFile(user, password);
+        });
+        
+        Once we do that, we can create the actual information to save the files.
+        
+        // We use private because it isn't going to be used in any other classes (there's 1 other class)
+        // We use Try-Catch statements to debug the process as this is a little unstable...
+        // When you save the info then close out of the Swing application 
+        // since it's being used in an IDE only, we can just use print to print ou tthe exception that occurs in the process via terminal.
+            private void creatUserFile(String username, String password) {
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("Login-Info" + ".json"))) {
+            bufferedWriter.write(username + ", " + password);
+        } catch (Exception exception) {
+            System.out.println(exception.getMessage());
+        }
+    }
+````
+
+## How to make both input values blank
+- So, this is the final tutorial.
+
+````
+
+// First, we create the JButton called ResetButton...
+
+        frame.add(resetButton);
+        
+        
+        resetButton.setBounds(0, 220, 120, 20); // sets the bounds
+        resetButton.setFont(new Font(null, Font.PLAIN, 10)); // font
+        // so, on this part, we create another Actoin Listener to set both Username, and password to blank.
+        // this will only happen when the user clicks it, refering to the onClick -> {
+        // we use an arrow to figure out where the onClick Event will happen. On this part we can see it will be related to
+        usernameText.setText("");
+        passwordField.setText(""); 
+        
+        resetButton.addActionListener(onClick -> {
+            usernameText.setText("");
+            passwordField.setText("");
+        });
+    }
+
+
+
+````
+
+# A note from the Developer :)
+
+Hi, this is from TwoOneTwo. I just want to let you guys know this isn't over yet, even though it looks like it is. It will not end,
+this project was held together like a 4th grade outer space project using HotGlue and boogers. I'm not a fan of the outcome, but I would like to provide
+a tutorial on most of what I wrote here, I had to use tutorials to figure out this because Swing is not a fun application to use, it is super unstable, and it 
+is very old, I would not recommend it as it will mess up most things and the syntax will mess with your brain causing hair pulling events that you will regret.
+I just want to say that I wasted a month of my life making this mistake of a program, but I will continue to update it and update everything here for a better understanding.
