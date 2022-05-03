@@ -2,6 +2,8 @@ package main;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 
@@ -9,12 +11,12 @@ import java.io.FileWriter;
  * The type Register page.
  */
 
-public class RegisterPageJava {
+public class RegisterPageJava extends JFrame {
 
     /**
      * The Frame.
      */
-    JFrame frame = new JFrame();
+    JFrame frame = new JFrame("Register");
     /**
      * The Username label.
      */
@@ -66,7 +68,6 @@ public class RegisterPageJava {
         frame.add(resetButton);
         frame.add(saveInfo);
 
-        frame.setTitle("Register");
         frame.setResizable(false);
         frame.setSize(700, 300);
         frame.getContentPane().setBackground(Color.darkGray);
@@ -86,6 +87,7 @@ public class RegisterPageJava {
         activationInput.setBounds(120, 180, 700, 20);
         activationCode.setBounds(20, 180, 100, 20);
         activationCode.setFont(new Font(null, Font.PLAIN, 12));
+        activationCode.setForeground(Color.WHITE);
 
         saveInfo.setBounds(0, 200, 120, 20);
         saveInfo.addActionListener(onClick -> {

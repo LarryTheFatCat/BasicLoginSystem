@@ -12,7 +12,7 @@ import java.io.FileWriter;
 /**
  * This is the LoginPage
  */
-public class LoginPageJava implements ActionListener {
+public class LoginPageJava extends JFrame implements ActionListener {
 
     public static void main(String[] args) {
         LoginPageJava launchPage = new LoginPageJava();

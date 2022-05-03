@@ -1,11 +1,68 @@
 # BasicInstaller :)
-- Java 15
+
+## Java Version?
+- Developed in Java15, Java 15 Syntax...
+## Features
+
+- This example shows what a basic Login System using Swing would look like.
+- Swing GUI is very outdated, I don't recommend taking any ideas from this as it is still a WIP (Work In Progress) and is not the best.
+- I can recommend that you use JavaFX as it's more modern and a lot better when compiling and using.
+- The features that this includes in the Login Page include:
+  - Title displayed as "Login"
+  - Login Button 
+  - Username text box
+  - Username Label
+  - Password text box
+  - Password label
+  - A popup window when Login is clicked displaying "Successful Login"
+  - Save Info <- will create a JSON file that holds your username and password...
+  - Reset Button <- Sets the username and password values to 0...
+- Now For Register:
+  - Title displayed as "Register"
+  - Register Button
+  - Username text box
+  - Username Label
+  - Password text box
+  - Password label
+  - ActivationCode label
+  - ActivationCode input
+  - A popup window when Register is clicked displaying "Successful Login"
+  - Save Info <- will create a JSON file that holds your username and password...
+  - Reset Button <- Sets the username and password values to 0...
 
 
+## Wanting to use this layout?
+- If you don't feel like creating a layout and want to use mine, but a question you come upon is what is build.gradle.kts & settings.gradle.kts
+- build.gradle.kts is like groovy, but it is meant for Kotlin building, obviously you think there's no kotlin anywhere in the build. You're right! There is not. I just have this because I really like using it as it is more reliable and easier :)
+- I get you might not like having this but if you must, I will provide the source code for a groovy version, apparently it's easier and such, but I find that hard to believe.
 
+settings.gradle: 
+
+`rootProject.name "InstallerLayoutExample" `
+
+
+build.gradle:
+````
+
+apply plugin: 'java'
+
+group 'main.TestingClass'
+version '1.0-SNAPSHOT'
+archivesBaseName = 'SwingApplication'
+
+jar {
+manifest {
+attributes "Main-Class": "main.LoginPage"
+}
+
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}`
+````
 # A Guide
 
- ## LoginPageJava() {
+ #### LoginPageJava() {
 - Pretty much initializes anything inside of it, you always have to do this when you are using Java Swing
  
 
@@ -28,7 +85,7 @@
         frame.setVisible(true);  }
 ```
 
- ## frame.add(....);
+ #### frame.add(....);
 - To make anything visible, you first have to create the actual Frame.
 - In Swing, go to the LoginPageJava() {, and then create your frame outline.
   - Make sure to create a variable for your frame (meaning JFrame frame = new JFrame(String-Title: "Example" ); )
@@ -64,7 +121,7 @@
 
 ````
 
-## How to make a Second window Open up :)
+### How to make a Second window Open up :)
  - So, this is a complicated process, but I will simplify the process for you :)
  ````
 
@@ -93,7 +150,7 @@
         }
 ````
 
-## How to save your information with a CheckBox :)
+### How to save your information with a CheckBox :)
 ````
 
 // So, you've come this far and you're wondering how to save your information for when users may not remember their password.
@@ -126,7 +183,7 @@
     }
 ````
 
-## How to make both input values blank
+### How to make both input values blank
 - So, this is the final tutorial.
 
 ````
