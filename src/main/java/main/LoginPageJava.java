@@ -2,12 +2,9 @@ package main;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.datatransfer.Clipboard;
-import java.awt.datatransfer.StringSelection;
-import java.awt.event.ActionEvent;
+import java.io.*;
 import java.awt.event.ActionListener;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
+import java.awt.event.ActionEvent;
 
 /**
  * This is the LoginPage
@@ -114,13 +111,13 @@ public class LoginPageJava extends JFrame implements ActionListener {
     }
 
 
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            if (e.getSource() == register) {
-                frame.dispose();
-                RegisterPageJava myWindow = new RegisterPageJava();
-            }
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == register) {
+            frame.dispose();
+            RegisterPageJava myWindow = new RegisterPageJava();
         }
+    }
 
     private void creatUserFile(String username, String password) {
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("Login-Info" + ".json"))) {

@@ -1,47 +1,54 @@
 # BasicInstaller :)
 
 ## Java Version?
+
 - Developed in Java15, Java 15 Syntax...
+
 ## Features
 
 - This example shows what a basic Login System using Swing would look like.
-- Swing GUI is very outdated, I don't recommend taking any ideas from this as it is still a WIP (Work In Progress) and is not the best.
+- Swing GUI is very outdated, I don't recommend taking any ideas from this as it is still a WIP (Work In Progress) and
+  is not the best.
 - I can recommend that you use JavaFX as it's more modern and a lot better when compiling and using.
 - The features that this includes in the Login Page include:
-  - Title displayed as "Login"
-  - Login Button 
-  - Username text box
-  - Username Label
-  - Password text box
-  - Password label
-  - A popup window when Login is clicked displaying "Successful Login"
-  - Save Info <- will create a JSON file that holds your username and password...
-  - Reset Button <- Sets the username and password values to 0...
+    - Title displayed as "Login"
+    - Login Button
+    - Username text box
+    - Username Label
+    - Password text box
+    - Password label
+    - A popup window when Login is clicked displaying "Successful Login"
+    - Save Info <- will create a JSON file that holds your username and password...
+    - Reset Button <- Sets the username and password values to 0...
 - Now For Register:
-  - Title displayed as "Register"
-  - Register Button
-  - Username text box
-  - Username Label
-  - Password text box
-  - Password label
-  - ActivationCode label
-  - ActivationCode input
-  - A popup window when Register is clicked displaying "Successful Login"
-  - Save Info <- will create a JSON file that holds your username and password...
-  - Reset Button <- Sets the username and password values to 0...
-
+    - Title displayed as "Register"
+    - Register Button
+    - Username text box
+    - Username Label
+    - Password text box
+    - Password label
+    - ActivationCode label
+    - ActivationCode input
+    - A popup window when Register is clicked displaying "Successful Login"
+    - Save Info <- will create a JSON file that holds your username and password...
+    - Reset Button <- Sets the username and password values to 0...
 
 ## Wanting to use this layout?
-- If you don't feel like creating a layout and want to use mine, but a question you come upon is what is build.gradle.kts & settings.gradle.kts
-- build.gradle.kts is like groovy, but it is meant for Kotlin building, obviously you think there's no kotlin anywhere in the build. You're right! There is not. I just have this because I really like using it as it is more reliable and easier :)
-- I get you might not like having this but if you must, I will provide the source code for a groovy version, apparently it's easier and such, but I find that hard to believe.
 
-settings.gradle: 
+- If you don't feel like creating a layout and want to use mine, but a question you come upon is what is
+  build.gradle.kts & settings.gradle.kts
+- build.gradle.kts is like groovy, but it is meant for Kotlin building, obviously you think there's no kotlin anywhere
+  in the build. You're right! There is not. I just have this because I really like using it as it is more reliable and
+  easier :)
+- I get you might not like having this but if you must, I will provide the source code for a groovy version, apparently
+  it's easier and such, but I find that hard to believe.
+
+settings.gradle:
 
 `rootProject.name "InstallerLayoutExample" `
 
-
 build.gradle:
+
 ````
 
 apply plugin: 'java'
@@ -60,11 +67,12 @@ attributes "Main-Class": "main.LoginPage"
     }
 }`
 ````
+
 # A Guide
 
- #### LoginPageJava() {
+#### LoginPageJava() {
+
 - Pretty much initializes anything inside of it, you always have to do this when you are using Java Swing
- 
 
 ```
 ` LoginPageJava() {
@@ -85,11 +93,13 @@ attributes "Main-Class": "main.LoginPage"
         frame.setVisible(true);  }
 ```
 
- #### frame.add(....);
+#### frame.add(....);
+
 - To make anything visible, you first have to create the actual Frame.
 - In Swing, go to the LoginPageJava() {, and then create your frame outline.
-  - Make sure to create a variable for your frame (meaning JFrame frame = new JFrame(String-Title: "Example" ); )
-`    
+    - Make sure to create a variable for your frame (meaning JFrame frame = new JFrame(String-Title: "Example" ); )
+      `
+
  ````
     
     JButton registerButton = new RegisterButton("Register");
@@ -122,7 +132,9 @@ attributes "Main-Class": "main.LoginPage"
 ````
 
 ### How to make a Second window Open up :)
- - So, this is a complicated process, but I will simplify the process for you :)
+
+- So, this is a complicated process, but I will simplify the process for you :)
+
  ````
 
 // So, let's create a button to open up the second window
@@ -151,6 +163,7 @@ attributes "Main-Class": "main.LoginPage"
 ````
 
 ### How to save your information with a CheckBox :)
+
 ````
 
 // So, you've come this far and you're wondering how to save your information for when users may not remember their password.
@@ -184,6 +197,7 @@ attributes "Main-Class": "main.LoginPage"
 ````
 
 ### How to make both input values blank
+
 - So, this is the final tutorial.
 
 ````
@@ -213,8 +227,13 @@ attributes "Main-Class": "main.LoginPage"
 
 # A note from the Developer :)
 
-Hi, this is from TwoOneTwo. I just want to let you guys know this isn't over yet, even though it looks like it is. It will not end,
-this project was held together like a 4th grade outer space project using HotGlue and boogers. I'm not a fan of the outcome, but I would like to provide
-a tutorial on most of what I wrote here, I had to use tutorials to figure out this because Swing is not a fun application to use, it is super unstable, and it 
-is very old, I would not recommend it as it will mess up most things and the syntax will mess with your brain causing hair pulling events that you will regret.
-I just want to say that I wasted a month of my life making this mistake of a program, but I will continue to update it and update everything here for a better understanding.
+Hi, this is from TwoOneTwo. I just want to let you guys know this isn't over yet, even though it looks like it is. It
+will not end,
+this project was held together like a 4th grade outer space project using HotGlue and boogers. I'm not a fan of the
+outcome, but I would like to provide
+a tutorial on most of what I wrote here, I had to use tutorials to figure out this because Swing is not a fun
+application to use, it is super unstable, and it
+is very old, I would not recommend it as it will mess up most things and the syntax will mess with your brain causing
+hair pulling events that you will regret.
+I just want to say that I wasted a month of my life making this mistake of a program, but I will continue to update it
+and update everything here for a better understanding.
