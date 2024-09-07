@@ -196,7 +196,7 @@ attributes "Main-Class": "main.LoginPage"
     }
 ````
 
-### How to make both input values blank
+### How to clear input
 
 - So, this is the final tutorial.
 
@@ -224,16 +224,3 @@ attributes "Main-Class": "main.LoginPage"
 
 
 ````
-
-# A note from the Developer :)
-
-Hi, this is from TwoOneTwo. I just want to let you guys know this isn't over yet, even though it looks like it is. It
-will not end,
-this project was held together like a 4th grade outer space project using HotGlue and boogers. I'm not a fan of the
-outcome, but I would like to provide
-a tutorial on most of what I wrote here, I had to use tutorials to figure out this because Swing is not a fun
-application to use, it is super unstable, and it
-is very old, I would not recommend it as it will mess up most things and the syntax will mess with your brain causing
-hair pulling events that you will regret.
-I just want to say that I wasted a month of my life making this mistake of a program, but I will continue to update it
-and update everything here for a better understanding.
