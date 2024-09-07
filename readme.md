@@ -1,8 +1,4 @@
-# BasicInstaller :)
-
-## Java Version?
-
-- Developed in Java15, Java 15 Syntax...
+# BasicInstaller
 
 ## Features
 
